@@ -1,0 +1,410 @@
+version: "2.0"
+nlu:
+
+- intent: affirm
+  examples: |
+    - yeah
+    - correct
+    - ye
+    - uh yes
+    - let's do it
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that
+    - yeeessssss
+    - you got it
+    - it's correct
+    - go ahead please
+
+- intent: login_data
+  examples: |
+    - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-1020](emp_code) and password is [Sfrtu@453](password)
+    - employee code is [OMI-1032](emp_code) and password is [Gjsy$127](password)
+    - employee code is [OMI-0083](emp_code) and password is [djfh#8765](password)
+
+- regex: emp_code
+  examples: |
+    - \b(OMI-)[0-9]{4}\b
+    
+- intent: deny
+  examples: |
+    - no
+    - no new selection
+    - no thanks
+    - no thank you
+    - uh no
+    - breath no
+    - do you have something else
+    - no this does not work for me
+    - no indeed
+    - absolutely not
+    - most certainly not
+    - of course not
+    - under no circumstances
+    - by no means
+    - not at all
+    - negative
+    - never
+    - not really
+    - nae
+    - nope
+    - nah
+    - not on your life
+    - no way
+    - no fear
+    - not on your nelly
+    - no siree
+    - naw
+    - nay
+    - something is missing
+    - few are wrong
+    
+- intent: Training_Management
+  examples: |
+    - continue with Training management
+    - Training Management
+    - training management
+    - Trainings Management
+    - trainings
+    - Trainings
+    - all trainings
+    - Show me training
+    - show me trainings
+    - Show me training management
+    - trainings for trainee
+    - current trainings
+    - could you give me information about current training?
+    - i want trainings information
+    - go to training management menu
+    - visit training management
+    - trainings in my account
+    
+- intent: Training_request
+  examples: |
+    - continue with Training requests
+    - Training Requests
+    - Training Request
+    - training request
+    - Show me training request
+    - show me [all](trainees) training requests
+    - Show me [all](trainees) training request
+    - show me training requests
+    - [all](trainees) training requests
+    - Show me training requests
+    - training requests for trainee
+    - current training requests
+    - could you give me information about current training requests?
+    - i want training requests information
+    - go to training request management menu
+    - visit training requests management
+    - training requests in my account
+    - Training Requests of [Shivani](trainees)
+    - Training Request for [Yamini](trainees)
+    - training request of [Vidya](trainees)
+    - Show me training request of [Pritee](trainees)
+    - show me training requests for [Sandhya](trainees)
+    - Show me training requests of [Shubhangi](trainees)
+    - training requests for [Shruti](trainees)
+    - current training requests for [Prashant](trainees)
+    - Could you give me information about about current training requests for [Gaurav](trainees)?
+    - i want training requests information of [Arjun](trainees)
+    - go to training request management menu [amit](trainees)
+    - visit training requests management [ajith](trainees)
+    
+- intent: Ongoing_trainings
+  examples: |
+    - ongoing training
+    - ongoing trainings
+    - Ongoing trainings
+    - Please show me the list of ongoing training
+    - Show me list of uncompleted training
+    - Show me list of training which are ongoing
+    - Show me list of training which are still continue
+    - Could you provide me list of ongoing training?
+    - All ongoing training details
+    - Uncompleted training details
+    - Provide me list of uncompleted training
+    - could you provide me ongoing training list?
+    - show me list of ongoing training
+    - my uncompleted trainings
+    - details of ongoing training
+    - ongoing training of [ajith](trainees)
+    - ongoing trainings of [amit](trainees)
+    - Ongoing trainings of [shivani](trainees)
+    - Please show me the list of ongoing training [vidya](trainees)
+    - Show me list of uncompleted training of [yamini](trainees)
+    - Show me list of training which are ongoing [sadhya](trainees)
+    - Show me list of training which are still continue [Arjun](trainees)
+    - Could you provide me list of ongoing training of [Saurabh](trainees)?
+    - Please show me the list of ongoing training of [Prashant](trainees)
+    - [All](trainees) ongoing training details
+    - Uncompleted training details of [All](trainees) trainees
+    - Provide me list of uncompleted training of [Ajay](trainees)
+    - could you provide me ongoing training list of [Shubham](trainees)?
+    - show me list of ongoing training of [All](trainees) trainees
+    
+- intent: Completed_training
+  examples: |
+    - completed training
+    - completed trainings
+    - Completed training
+    - Please show me the list of completed training
+    - Show me list of completed training
+    - Show me list of training which are completed
+    - Could you provide me list of completed training?
+    - All completed training details
+    - completed training details
+    - Provide me list of completed training
+    - could you provide me completed training list?
+    - show me list of completed training
+    - my completed trainings
+    - details of completed training
+    - completed training of [Pritee](trainees)
+    - completed trainings of [Nilesh](trainees)
+    - Completed training of [shubhangi](trainees)
+    - Please show me the list of completed training of [shruti](trainees)
+    - Show me list of completed training of [Gajanan](trainees)
+    - Show me list of training which are completed of [All](trainees)
+    - Show me list of training which are completed of [Gaurav](trainees)
+    - Could you provide me list of completed training of [All](trainees)?
+    - Please show me the list of completed training of [all](trainees)
+    - All completed training details of [all training](trainees)
+    - completed training details of [all training](trainees)
+    - Provide me list of completed training of [all trainings](trainees)
+    - could you provide me completed training list of [every training](trainees)?
+    
+- intent: trainee_details
+  examples: |
+    - [fjffjf](trainees)
+    - [Babu](trainees)
+    - [Mallikarjun](trainees)
+    - [Shubham](trainees)
+    - [shivani](trainees)
+    - [Yamini](trainees)
+    - [ajit](trainees)
+    - [pritee](trainees)
+    - [gaurav](trainees)
+    - [amit](trainees)
+    - [Shruti](trainees)
+    - [sushant](trainees)
+    - [shubhangi](trainees)
+    - [kranti](trainees)
+    - [Sandhya](trainees)
+    - [john](trainees)
+    - [vidya](trainees)
+    - [prashant](trainees)
+    - tell me [vidya](trainees)
+    - [sandhya](trainees)
+    - [nagarjun](trainees)
+    - [gajanan](trainees)
+    - [neelam](trainees)
+    - about [ajit](trainees)
+    - about [shivani](trainees)
+    - about [shruti](trainees)
+    - about [shubhangi](trainees)
+    - [sachin](trainees)
+    - [yamini](trainees)
+    
+- intent: number_of_trainee_details
+  examples: |
+    - [all](number_of_trainee)
+    - [All Trainees](number_of_trainee)
+    - [A Particular Trainee](number_of_trainee)
+    - [trainee](number_of_trainee)
+    
+- intent: Approved_list
+  examples: |
+    - Approved List
+    - Show me all approved training request
+    - Which training request are approved
+    - Show me all approved training requests
+    - What are the approved training requests?
+    - Show me approved training request in my account
+    - List out the approved training requests
+    - I want approved training requests
+    - approved training requests
+    - list approved training requests
+    - Who’s training requests are approved?
+    - all approved training requests
+    - share approved training requests list with me
+    - Help me with training requests which are approved
+    - Help me with approved training requests
+    - Is there any training request approved?
+    - What are training requests?
+    - For whom training request is generated?
+    - Approved training request
+    
+- intent: Pending_list
+  examples: |
+    - Pending List
+    - What are the pending training requests?
+    - Show me pending training request in my account
+    - List out the pending training requests
+    - I want pending training requests
+    - pending training requests
+    - list pending training requests
+    - Who’s training requests are pending?
+    - all pending training requests
+    - share pending training requests list with me
+    - okay then I want training requests which are pending
+    - Help me with training requests which are pending
+    - Help me with pending training requests
+    - Is there any training request pending for my approval?
+    - List out trainee requested for training
+    - Competencies requested to train
+    - Generated training request
+    
+- intent: Request_for_training
+  examples: |
+    - Request for training
+    - request for training
+    - generate a request for training
+    - generate training request
+    - i want training on new skill
+    - i want to learn about new skill
+    - new training required for me
+    - i required one training
+    - i need to learn new skill
+    - i need a training for my improvement
+    - i need training with new skill
+    - i need extra training for current project
+    - for current project i required a training
+    
+- intent: update_status
+  examples: |
+    - i want to update
+    - update
+    - update training requests
+    - i am going to update status
+    - Update
+    - my trainings
+    - My training
+    - i want to see my trainings
+    - show my trainings
+    - trainings for me
+    - update status of trainings
+    - UPDATE
+    - i want to update status of my trainings
+  
+    
+- intent: status_of_training
+  examples: |
+    - [start](status)
+    - i am going to [start](status) this training
+    - update status to [In progress](status)
+    - I am going [start](status) this training
+    - [completed](status)
+    - i have [completed](status) this training
+    - update status to [completed](status)
+    - i am going to [complete](status) this training
+    
+- intent: training_type
+  examples: |
+    - [Training](training_type_trainee)
+    - [Self Study](training_type_trainee)
+    - [Practical](training_type_trainee)
+    - [training](training_type_trainee)
+    - [self study](training_type_trainee)
+    - [practical](training_type_trainee)
+    - i am doing [self study](training_type_trainee)
+    - i have started [training](training_type_trainee) of this training.
+    
+- intent: Training_specification
+  examples: |
+    - [Competency specific](specific_training)
+    - [Period specific](specific_training)
+    - [Trainee specific](specific_training)
+    
+- intent: requested_training
+  examples: |
+    - show me requested training
+    - show me requested trainings
+    - requested training
+    - requested trainings
+    - show me requested training of [next week](daterange)
+    - show me requested trainings of [august](daterange)
+    - employees requested for trainings for [next month](daterange)
+    - Which employees are requested for trainings [yesterday](daterange)?
+    - employees requested for trainings
+    - who is requested for trainings
+    - who is requested for trainings in [next month](daterange)
+    - who is requested for trainings in [today](daterange)
+    - who is requested for trainings in [tomorrow](daterange)
+    - employee requested for training
+    - who is requested for training
+    - show me all requested trainings of employee
+    - show me requested trainings for [next week](daterange)
+    - show me requested trainings for [august](daterange)
+    - show me requested trainings for [next month](daterange)
+    - show me requested trainings for [today](daterange)
+    - employees requested for training in [next month](daterange)
+    - employees requested for training on [day after tomorrow](daterange)
+    - employees requested for training on [after a week](daterange)
+    - employees requested for training [today](daterange)
+    - list the employee requested for training
+    - list the employees requested for training
+
+- intent: affirm
+  examples: |
+    - yeah a cheap restaurant serving international food
+    - correct
+    - ye
+    - uh yes
+    - let's do it
+    - yeah
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that
+    
+- intent: deny
+  examples: |
+    - no
+    - no new selection
+    - no thanks
+    - no thank you
+    - uh no
+    - breath no
+    - do you have something else
+    - no this does not work for me
+    - no indeed
+    - absolutely not
+    - most certainly not
+    - of course not
+    - under no circumstances
+    - by no means
+    - not at all
+    - negative
+    - never
+    - not really
+    - nae
+    - nope
+    - nah
+    - not on your life
+    - no way
+    - no fear
+    - not on your nelly
+    - no siree
+    - naw
+    - nay
+    
+- intent: stop
+  examples: |
+    - stop please
+    - stop

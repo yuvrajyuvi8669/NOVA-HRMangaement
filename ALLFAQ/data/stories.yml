@@ -1,0 +1,57 @@
+version: "2.0"
+
+stories:
+
+
+
+- story: attendance
+  steps:
+  - intent: attendance
+  - action: action_attendance
+  
+- story: 
+  steps:
+  - intent: general
+  - action: action_general
+
+- story: travel
+  steps:
+  - intent: travel
+  - action: action_travel
+
+- story: leave
+  steps:
+  - intent: leave
+  - action: action_leave
+
+# - story: timing
+#   steps: 
+#   - intent: timing
+#   - action: action_timing
+
+- story: set login slot
+  steps:
+  - intent: login_data
+  - action: action_set_login_slots
+
+- story: faq_flow
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+

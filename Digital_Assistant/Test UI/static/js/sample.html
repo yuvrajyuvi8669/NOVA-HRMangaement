@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+    <h1>Show checkboxes:</h1>
+
+
+    <input type="checkbox" value="Bike" onchange="fun()"> I have a bike<br>
+    <input type="checkbox" value="Car" onchange="fun()"> I have a car<br>
+    <input type="checkbox" value="Boat" onchange="fun()"> I have a boat<br><br>
+
+    <div id="replace">fgfgfgff</div>
+    <script>
+        function fun() {
+            document.getElementById('replace').innerHTML = "sdsjdhjh";
+            var checkboxes = document.getElementsByTagName("checkbox");
+
+            if (checkboxes[0].checked == true) {
+                document.getElementById('replace').innerHTML = checkboxes[0].value;
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+version: "2.0"
+
+intents: 
+  - empID
+  - user_login
+  - data
+  - greet
+  - thanks
+  - logout
+  - goodbye
+  - main_menu
+  - faq
+  - prof_info
+  - leaves
+  - Training_Management
+  - tte_mgmt
+
+slots:
+  logout_status:
+    type: bool
+    influence_conversation: true
+  login_status:
+    type: bool
+    influence_conversation: true
+  emp_code: 
+    type: text
+    influence_conversation: true
+  password:
+    type: text
+    influence_conversation: true
+
+entities: 
+  - emp_code
+  - password  
+
+actions: 
+  - action_check_login_status
+  - validate_user_login_form
+  - action_restart
+  - action_reset
+  - utter_default_fallback
+  - action_check_logged_for_main_menu
+  - action_user_login_form_submit
+  
+responses: 
+  utter_default_fallback: 
+    - text: Could you please rephrase it for me. I am not geeting what do you want to say?
+    - text: OOPs!! I missed something. Could you please rephrase it? 
+
+  utter_service_failed_login_message:
+    - text: Login Please
+    - text: Sign Up Please
+
+  utter_ask_emp_code:
+    - text: Could you please provide me Employee Id (E.g.OMI-1065)?
+  
+  utter_ask_password:
+    - text: Could you please provide me password?
+  
+  # utter_affirm: 
+  #   - buttons: 
+  #     - payload: "Profile Info"
+  #       title: "Profile Info"
+  #   - payload: leave management
+  #     title: Leave Management
+  #   - payload: Leave Approval
+  #     title: leave approval
+  #   - payload: trainings management
+  #     title: Trainings
+  #   - payload: Projects please
+  #     title: Project Mgmt.
+  #   - payload: Enquiries
+  #     title: Enquiries
+  #   - payload: faq
+  #     title: FAQ
+  #   - payload: logout
+  #     title: Exit
+  #   text: "You are to avail my assistance. You can choose features to get started or type in a direct message."
+
+  utter_bad: 
+    - text: I'm sorry If you feel so
+  
+  utter_bot_helping: 
+    - text: "Glad to be of service."
+    - text: Thanks!
+  
+  utter_bot_not_helping: 
+    - text: "Apologize! If I'm not helping you much"
+    - text: "Sorry! If I'm not helping you much"
+  
+  utter_coffee: 
+    - text: "I am a bot I can not make coffee for you"
+    - text: "Yeah...! coffee contains cafen"
+    - text: "I think coffee is black"
+    - text: "Coffee can be with milk or without milk"
+  
+  utter_default: 
+    - buttons: 
+      - payload: "main menu"
+        title: Home
+      text: Visit Home
+
+  utter_logout_meesage: 
+    - text: "You have successfully logged out..."
+
+  utter_goodbye: 
+    - text: "Bye!Talk to you later"
+    - text: "Bye Bye :("
+    - text: BBye! Have a nice day ahead.
+  utter_wrong_emp_code:
+    - text: "You have entered Wrong EMP code(e.g.OMI-2003)"
+  utter_wrong_password:
+    - text: "You have entered wrong password"
+
+  utter_greet: 
+    - buttons: 
+      - payload: login
+        title: Login
+      text: "Hey! I am NOVA. Your HR Digital Assistance. Could you please log in for my help?"
+ 
+  utter_help_user: 
+    - buttons: 
+      - payload: "Profile Info"
+        title: "Profile Info"
+      - payload: leave management
+        title: "Leave Management"
+      - payload: leave_approval 
+        title: Leave Approval
+      # - payload: training management
+      #   title: Trainings
+      # - payload: projects please
+      #   title: Project Mgmt
+      # - payload: Enquiries
+      #   title: Enquiries
+      - payload: faq
+        title: FAQ
+      - payload: logout
+        title: Exit
+      text: "Congratulations! You are to avail my assistance. You can choose features to get started or type in a direct message."
+
+  utter_help_user_after_loggedin: 
+    - buttons: 
+      - payload: "Profile Info"
+        title: "Profile Info"
+      - payload: leave management
+        title: "Leave Management"
+      - payload: Leave Approval
+        title: leave approval
+      - payload: training management
+        title: Trainings
+      - payload: Projects please 
+        title: Project Mgmt
+      - payload: Compensation
+        title: Compensation
+      - payload: faq
+        title: FAQ
+      - payload: logout
+        title: Exit
+      text: "You are to avail my assistance. You can choose features to get started or type in a direct message."
+
+  utter_initialize_message: 
+    - buttons: 
+      - payload: login
+        title: Login
+      text: "Hey! I am NOVA. Your HR Digital Assistance. To be proceed please log in."
+  
+  utter_invalid_login: 
+    - buttons: 
+      - payload: login
+        title: Login
+      text: "Your [employee code|password] incorrect. Please provide valid credentials."
+  
+  utter_main_menu: 
+    - buttons: 
+      - payload: logout
+        title: Exit
+      - payload: "main menu"
+        title: Home
+      text: "Do you want to avail my any further assistance?"
+
+forms: 
+  user_login_form:
+    emp_code:
+      - type: from_text
+    password:
+      - type: from_text
+      
+
+session_config:   
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

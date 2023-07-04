@@ -1,0 +1,99 @@
+[
+  {
+    "text": "the code is OMI-1436 and password isOmfys@123",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "OMI-1436",
+        "entity": "emp_code"
+      },
+      {
+        "start": 36,
+        "end": 45,
+        "value": "Omfys@123",
+        "entity": "password"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "emp_code",
+        "start": 12,
+        "end": 20,
+        "confidence_entity": 0.999445378780365,
+        "value": "OMI-1436",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "employee code is OMI-0001 and password and Omfys@123",
+    "entities": [
+      {
+        "start": 17,
+        "end": 25,
+        "value": "OMI-0001",
+        "entity": "emp_code"
+      },
+      {
+        "start": 43,
+        "end": 52,
+        "value": "Omfys@123",
+        "entity": "emp_code"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "emp_code",
+        "start": 17,
+        "end": 25,
+        "confidence_entity": 0.9994528889656067,
+        "value": "OMI-0001",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "password",
+        "start": 43,
+        "end": 52,
+        "confidence_entity": 0.8792654871940613,
+        "value": "Omfys@123",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "cancel my leave request from 22/2/2020 to 23/2/2020",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "22/2/2020",
+        "entity": "date"
+      },
+      {
+        "start": 42,
+        "end": 51,
+        "value": "23/2/2020",
+        "entity": "daterange"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "daterange",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.8660653233528137,
+        "value": "22/2/2020",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "daterange",
+        "start": 42,
+        "end": 51,
+        "confidence_entity": 0.9418185353279114,
+        "value": "23/2/2020",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

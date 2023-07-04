@@ -1,0 +1,95 @@
+version: "2.0"
+rules:
+
+- rule: interactive_rule_1
+  steps:
+  - intent: login_data
+  - action: action_set_login_slots
+
+  # greet
+
+
+- rule: set login slot
+  steps:
+  - intent: login_data
+  - action: action_set_login_slots
+
+##---------------------------most common rule ----------------------------------###
+
+- rule: get_pf_details
+  steps:
+  - intent: pf_detail
+  - action: action_check_login_for_pf_details
+  
+  
+- rule: get_salary_details
+  steps:
+  - intent: salary_details
+  - action: action_check_login_for_salary_details
+  
+  
+- rule: get_empid1
+  steps:
+  - intent: empID
+  - action: action_get_empid
+
+  
+- rule: get_date_of_joining1
+  steps:
+  - intent: DOJ
+  - action: action_get_DOJ
+  
+  
+- rule: get_designation1
+  steps:
+  - intent: designation
+  - action: action_get_designation
+  
+  
+- rule: get_grade1
+  steps:
+  - intent: grade
+  - action: action_get_grade
+  
+  
+- rule: get_annualctc1
+  steps:
+  - intent: annual_ctc
+  - action: action_get_annual_ctc
+  
+  
+- rule: get_monthly_gross_salary1
+  steps:
+  - intent: gr_sal
+  - action: action_get_mgs
+  
+  
+- rule: get_monthly_basic_salary1
+  steps:
+  - intent: bs_sal
+  - action: action_get_mbs
+
+  
+- rule: get_uan_number1
+  steps:
+  - intent: uan
+  - action: action_get_uan
+  
+- rule: get_esic_number1
+  steps:
+  - intent: esic
+  - action: action_get_esic
+  
+- rule: get_pf_number1
+  steps:
+  - intent: pf
+  - action: action_get_pf
+
+# profile information
+- rule: profile_service_module
+  steps:
+  - intent: prof_info
+  - action: action_check_logged_for_profile_service
+  
+
+  

@@ -1,0 +1,73 @@
+version: '3.0'
+services:
+    flask:
+        # image: nova_flask1
+        image: digital_assit 
+
+        volumes:
+            - ./:/app
+        networks:
+            - action_connect
+        ports:
+            - 5000:5000
+        restart: always
+    
+   # Action-Server-tte:
+   #     image: nova_tte_action
+   #     volumes:
+   #         - ./actions:/app/actions
+   #     networks:
+   #         - action_connect
+   #     ports:  
+   #         - 5014:5055
+   #     restart: always
+
+    Action-Server-login-logout:
+        image: nova_login_logout_action
+        volumes:
+            - ./actions:/app/actions
+        networks:
+            - action_connect
+        ports:  
+            - 5008:5055
+        restart: always
+        
+   # Action-Server-leave-mgmt:
+   #     image: nova_leave_mgmt_action
+   #     volumes:
+   #         - ./actions:/app/actions
+   #     networks:
+   #         - action_connect
+   #     ports:  
+   #         - 5009:5055
+   #     restart: always
+   # Action-Server-profile-info:
+   #    image: nova_profile_action
+   #    volumes:
+   #         - ./actions:/app/actions
+   #     networks:
+   #         - action_connect
+   #     ports:  
+   #         - 5010:5055
+   #     restart: always
+   # Action-Server-faq:
+   #     image: nova_faq_action
+   #     volumes:
+   #         - ./actions:/app/actions
+   #     networks:
+   #         - action_connect
+   #     ports:  
+   #         - 5012:5055
+   #     restart: always
+   # Action-Server-leave-approval:
+   #     image: nova_leave_approval_action
+   #     volumes:
+   #         - ./actions:/app/actions
+   #     networks:
+   #         - action_connect
+   #     ports:  
+   #         - 5013:5055
+   #     restart: always
+
+networks:
+    action_connect:         

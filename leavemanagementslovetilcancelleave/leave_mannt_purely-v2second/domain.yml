@@ -1,0 +1,255 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- leaves
+- leav_apply
+- leav_eli
+- leav_status
+- deny
+- affirm
+- login_data
+- leav_bal
+- cancel_leave_by_month_date
+- cancel_with_lr_id
+- Cancel_single_leave
+
+entities:
+- cancel_lr_id
+- daterange
+- emp_code
+- end_date
+- hand_over_Employee
+- knowledge_summary
+- leave_type
+- name2
+- password
+- purpose
+- start_date
+
+slots:
+  cancel_lr_id:
+    type: list
+  single_day_leave_date:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  one_day_leave:
+    type: bool
+    influence_conversation: true
+  separate_detail:
+    type: list
+    influence_conversation: true
+  end_date:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  hand_over_Employee:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  knowledge_summary:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  leave_days:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  leave_type:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  login_correct:
+    type: bool
+    influence_conversation: true
+  login_status:
+    type: bool
+    influence_conversation: true
+  pending_leaves:
+    type: text
+    influence_conversation: true
+  purpose:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  start_date:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  emp_code:
+    type: text
+  password:
+    type: text
+  name2:
+    type: list
+    influence_conversation: true
+  form_data:
+    type: text
+    influence_conversation: true
+responses:
+  utter_service_failed_login_message:
+    - buttons:
+      - payload: login
+        title: Login
+      text: Your credentials are missing. Please provide them.
+  utter_continue_leaves_service:
+  - buttons:
+    - payload: continue leave
+      title: Yes
+    - payload: home
+      title: No
+    text: Would you like to continue with my assistance?
+  # utter_continue_leaves_service:
+  #   - buttons:
+  #     - payload: continue leave
+  #       title: Continue Leave
+  #     text: Would you like to continue with my assistance?
+  utter_ask_emp_code:
+    - text: Could you please help me with your employee code? (e.g. OMI-0090)
+  utter_ask_password:
+    - text: You are just one step away to get my help, Could you please help me with your password?
+  utter_greet:
+    - buttons:
+      - payload: login
+        title: Login
+      text: Hey! I am NOVA. Your HR Digital Assitant. Could you please log in for my help?
+  utter_ask_start_date:
+    - text: Could you please help me with leave start date?[e.g DD-MMM-YYYY/23rd May]
+  utter_ask_end_date:
+    - text: Could you please help me with leave end date?[e.g DD-MMM-YYYY/23rd May]
+  utter_ask_hand_over_Employee:
+    - text: Please let me know to whom you are going to handover your responsibilities. <br> Could you please help me with employee id of respective collegue?
+  utter_ask_knowledge_summary:
+    - text: Could you please provide me KT summary?
+  utter_ask_leave_days:
+    - text: tell me no of days
+  utter_ask_leave_type:
+    - text: Could you please help me with leave type such as PL,CL,LWP,OD?
+  utter_leave_apply_failure:
+    - text: Your leave has not been applied.
+  utter_leave_apply_success:
+    - text: Great! You have applied successfully. 
+  utter_leave_information:
+    - buttons:
+      - payload: Can i get a leave?
+        title: Leave Eligibility
+      - payload: tell me my leave balance
+        title: Leave Balance
+      - payload: leave apply
+        title: Apply Leave
+      - payload: Cancel leave
+        title: Cancel Leave
+      - payload: show me leave status
+        title: Leave Status
+      text: I may assist you on following details, please choose your requirement.
+  utter_ask_which_leave_type:
+    - text: For which leave type you want to apply??
+  utter_leave_option:
+    - text: You can apply for the same
+  utter_invalid_login:
+    - buttons:
+      - payload: login
+        title: Login
+      text: Your [employee code/password] incorrect. Please provide valid credentials.
+  utter_wrong_emp_code:
+    - text: Hey! It seems you have entered wrong employee ID.
+  utter_wrong_end_date:
+    - text: Please provide end date in a valid format
+  utter_wrong_hand_over_Employee:
+    - text: Hey! It seems incorrect employee id.
+  utter_wrong_leave_type:
+    - text: Please provide correct leave type.
+  utter_wrong_name2:
+    - text: You may be entered incorrect name
+  utter_wrong_num_of_month:
+    - text: Sorry. It seems that you have given wrong response.
+  utter_deny:
+    - text: okay
+    - text: OK
+    - text: all right
+    - text: oke
+  utter_end_date_greater_than_start_date:
+    - text: Provided end date must be greater than start date
+  utter_wrong_other_emp_code:
+    - text: Your entered employee code is not valid
+  # utter_ask_separate_detail:
+  # - text: Which detail you want of this employee?[eg E-mail, Name, Post, Department, Role]
+  # utter_wrong_separate_detail:
+  # - text: Sorry I could not provide this details to you
+  utter_ask_single_day_leave_date:
+    - text: tell me date for which you want to apply.
+  utter_no_of_days:
+    - text: 'The entered no of days are : {leave_days} '
+  utter_ask_form_data:
+    - text: Could you please fill the details and proceed?
+  utter_affirm:
+  - buttons:
+    - payload: Profile Info
+      title: Profile Info
+    - payload: leaves
+      title: Leave Mgmt.
+    - payload: Trainings
+      title: Training Mgmt.
+    - payload: Projects management
+      title: Project Mgmt.
+    - payload: Enquiries
+      title: Enquiries
+    - payload: logout
+      title: Exit
+    text: You are in to avail my assistance. Choose your requirement?
+  utter_ask_lr_id1:
+    - text: Please mention the lr_id of employee
+  utter_wrong_cancel_lr_id:
+    - text: 'Ohh!! It seems that yu entered incorrect leave request id. Could you please enter existing leave request id?? '
+  utter_ask_cancel_lr_id:
+    - text: Please enter leave reuest id of leave which you want to cancel.
+actions:
+- action_apply_leave_api
+- action_apply_leave_fill_details
+- action_apply_leave_form_submit
+- action_check_leave_days
+- action_check_logged_for_leave_apply
+- action_check_logged_for_leaves_service
+- action_check_logged_for_main_menu
+- action_set_login_slots
+- action_check_login_status
+- action_get_leave_balance
+- action_get_leave_eligibility
+- action_get_leave_status
+- action_logout
+- action_check_login
+- action_myleavesdetails
+- utter_continue_leaves_service
+- validate_apply_leave_form
+- validate_cancel_lr_idform
+- action_cancel_lr_id_form_submit
+- action_cancel_Leave_by_Date
+- action_check_login_leave_apply
+- action_check_login_status_leave_status
+- action_check_login_status_cancel_lr_id
+
+forms:
+  apply_leave_form:
+    form_data:
+      - type: from_text
+    # start_date:
+    #   - type: from_entity
+    #     entity: start_date
+    # end_date:
+    #   - type: from_entity
+    #     entity: end_date
+    # leave_type:
+    #   - type: from_entity
+    #     entity: leave_type
+    # purpose:
+    #   - type: from_entity
+    #     entity: purpose
+    # hand_over_Employee:
+    #   - type: from_entity
+    #     entity: hand_over_Employee
+    # knowledge_summary:
+    #   - type: from_entity
+    #     entity: knowledge_summary

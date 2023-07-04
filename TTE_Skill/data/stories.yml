@@ -1,0 +1,349 @@
+version: "2.0"
+stories:
+
+# - story: Greeting
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+# - story: Goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+  
+# - story: login story flow control
+#   steps:
+#   - intent: user_login
+#   - action: user_login_form
+#   - active_loop: user_login_form
+#   - active_loop: null
+#   - action: action_user_login_form_submit
+
+# - story: log out
+#   steps:
+#   - intent: logout
+#   - action: action_logout
+#   - slot_was_set:
+#     - logout_status: false
+#   - slot_was_set:
+#     - emp_code: None
+#   - slot_was_set:
+#     - password: None
+#   - action: utter_logout_meesage
+
+# - story: go to main menu story
+#   steps:
+#   - intent: main_menu
+#   - action: action_check_logged_for_main_menu
+#   - slot_was_set:
+#     - emp_code: omi-83
+#   - slot_was_set:
+#     - password: omfys@123
+
+#---------------------- common story ---------------------------#    
+
+- story: Projects management_login_false
+  steps:
+  - intent: tte_mgmt
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+    
+- story: project management_login_true
+  steps:
+  - intent: tte_mgmt
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: utter_continue_project
+
+- story: add_tte log in failed flow
+  steps:
+  - intent: tte_details
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+
+- story: Go back to Previous menu of project list
+  steps:
+  - intent: back_to_previous_menu
+  - action: action_reset
+  - action: utter_continue_project
+
+- story: Go to same project will display maintask
+  steps:
+  - intent: same_project
+  - action: action_backTo_lastproject
+  - action: add_tte_form
+  - active_loop: add_tte_form
+  - active_loop: null
+  - slot_was_set:
+    - main_task_name: null
+  - slot_was_set:
+    - sub_task_name: null
+  - slot_was_set:
+    - sub_sub_task_name: null
+  - action: action_add_tte_form_submit
+  - action: action_getTTE_details
+  - action: TTE_entry_to_Database_form
+  - active_loop: TTE_entry_to_Database_form
+  - active_loop: null
+  - action: TTE_entry_to_Database_form_submit
+  - action: utter_newTTE_sameproject
+
+- story: Go to other projevt option Display all projects
+  steps:
+  - intent: other_project
+  - action: action_reset
+  - action: action_display_project_list
+  - action: add_tte_form
+  - active_loop: add_tte_form
+  - active_loop: null
+  - slot_was_set:
+    - main_task_name: null
+  - slot_was_set:
+    - sub_task_name: null
+  - slot_was_set:
+    - sub_sub_task_name: null
+  - action: action_add_tte_form_submit
+  - action: action_getTTE_details
+  - action: TTE_entry_to_Database_form
+  - active_loop: TTE_entry_to_Database_form
+  - active_loop: null
+  - action: TTE_entry_to_Database_form_submit
+  - action: utter_newTTE_sameproject
+
+- story: add_tte_with_same_project_path__with requestfortask_intent-action_add_task_description_slot
+  steps:
+  - intent: tte_details
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: action_display_project_list
+  - action: add_tte_form
+  - active_loop: add_tte_form
+  - active_loop: null
+  - slot_was_set:
+    - project_id: null
+  - slot_was_set:
+    - main_task_name: null
+  - slot_was_set:
+    - sub_task_name: null
+  - slot_was_set:
+    - sub_sub_task_name: null
+  - action: action_add_tte_form_submit
+  - action: action_getTTE_details
+  - action: TTE_entry_to_Database_form
+  - active_loop: TTE_entry_to_Database_form
+  - active_loop: null
+  - action: TTE_entry_to_Database_form_submit
+  - action: utter_newTTE_sameproject
+  - intent: same_project
+  - action: action_backTo_lastproject
+  - action: add_tte_form
+  - active_loop: add_tte_form
+  - active_loop: null
+  - slot_was_set:
+    - main_task_name: null
+  - slot_was_set:
+    - sub_task_name: null
+  - slot_was_set:
+    - sub_sub_task_name: null
+  - action: action_add_task_description_slot
+  - action: action_getTTE_details
+  - active_loop: TTE_entry_to_Database_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: TTE_entry_to_Database_form_submit
+  - action: utter_newTTE_sameproject
+
+- story: add_tte_with_long_voice_text
+  steps:
+  - intent: tte_details
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true  
+  - action: action_display_project_list
+  - action: add_tte_form
+  - active_loop: add_tte_form
+  - active_loop: null
+  - slot_was_set:
+    - project_id: null
+  - slot_was_set:
+    - main_task_id: null
+  - slot_was_set:
+    - sub_task_id: null
+  - slot_was_set:
+    - sub_sub_task_id: null
+  - action: action_add_tte_form_submit
+  - action: action_getTTE_details
+  - action: TTE_entry_to_Database_form
+  - active_loop: TTE_entry_to_Database_form
+  - active_loop: null
+  - slot_was_set:
+    - activity_name: null
+  - slot_was_set:
+    - start_time: null
+  - slot_was_set:
+    - end_time: null
+  - slot_was_set:
+    - task_status: null
+  - action: TTE_entry_to_Database_form_submit
+  - action: utter_newTTE_sameproject
+
+- story: interactive_story_3
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: tte_details
+    entities:
+    - project_name: omfys besta digital assistant in NOVA
+    - main_task_name: project management skill in nova
+    - activity_name: testing flow
+    - start_time:  9 am 
+    - time: 9 am
+    - time: 6 pm
+    - task_status: In Progress
+  - slot_was_set:
+    - task_status: In Progress
+  - slot_was_set:
+    - activity_name: testing flow
+  - slot_was_set:
+    - start_time: 9 am
+  - slot_was_set:
+    - project_name:
+      - omfys besta digital assistant in NOVA
+  - slot_was_set:
+    - main_task_name:
+      - project management skill in nova
+  - action: action_display_project_list
+  - slot_was_set:
+    - start_time: 9 am
+  - slot_was_set:
+    - end_time: 6 pm
+  - action: add_tte_form
+  - active_loop: add_tte_form
+  - slot_was_set:
+    - requested_slot: project_id
+  - slot_was_set:
+    - project_id: '106'
+  - slot_was_set:
+    - requested_slot: main_task_id
+  - slot_was_set:
+    - main_task_id: '102'
+  - slot_was_set:
+    - requested_slot: sub_task_id
+  - slot_was_set:
+    - sub_task_id: '73'
+  - slot_was_set:
+    - requested_slot: sub_sub_task_id
+  - slot_was_set:
+    - sub_sub_task_id: '90'
+  - active_loop: null
+  - action: action_add_tte_form_submit
+  - action: action_getTTE_details
+  - action: TTE_entry_to_Database_form
+  - active_loop: TTE_entry_to_Database_form
+  - slot_was_set:
+    - end_time: 6 pm
+  - slot_was_set:
+    - start_time: 9 am
+  - slot_was_set:
+    - task_status: In Progress
+  - slot_was_set:
+    - activity_name: testing flow
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: TTE_entry_to_Database_form_submit
+  - action: utter_newTTE_sameproject  
+
+- story: interactive_story_4
+  steps:
+  - intent: tte_details
+    entities:
+    - project_name: omfys besta digital assistant in NOVA
+    - main_task_name: Marketing Digital Assistant activity
+    - activity_name: testing flow
+    - start_time: '9 am '
+    - time: 9 am
+    - end_time: '6 pm '
+    - time: 6 pm
+    - task_status: In Progres
+  - slot_was_set:
+    - task_status: In Progres
+  - slot_was_set:
+    - activity_name: testing flow
+  - slot_was_set:
+    - start_time: '9 am '
+  - slot_was_set:
+    - end_time: '6 pm '
+  - slot_was_set:
+    - project_name:
+      - omfys besta digital assistant in NOVA
+  - slot_was_set:
+    - main_task_name:
+      - Marketing Digital Assistant activity
+  - action: action_display_project_list
+  - slot_was_set:
+    - start_time: 9 am
+  - slot_was_set:
+    - end_time: 6 pm
+  - action: add_tte_form
+  - active_loop: add_tte_form
+  - slot_was_set:
+    - requested_slot: project_id
+  - slot_was_set:
+    - project_id: '106'
+  - slot_was_set:
+    - requested_slot: main_task_id
+  - slot_was_set:
+    - main_task_id: '104'
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_add_tte_form_submit
+  - action: action_getTTE_details
+  - action: TTE_entry_to_Database_form
+  - active_loop: TTE_entry_to_Database_form
+  - slot_was_set:
+    - end_time: 6 pm
+  - slot_was_set:
+    - start_time: 9 am
+  - slot_was_set:
+    - task_status: In Progress
+  - slot_was_set:
+    - activity_name: testing flow
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: TTE_entry_to_Database_form_submit
+  - action: utter_newTTE_sameproject
+
+- story: set login slot
+  steps:
+  - intent: login_data
+  - action: action_set_login_slots
+
+# - story: user_login story
+#   steps:
+#   - intent: user_login
+#   - action: user_login_form
+#   - active_loop: user_login_form
+#   - slot_was_set:
+#     - requested_slot: emp_code
+#   - slot_was_set:
+#     - emp_code: OMI-1036
+#   - slot_was_set:
+#     - requested_slot: password
+#   - slot_was_set:
+#     - password: Omfys@123
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_user_login_form_submit

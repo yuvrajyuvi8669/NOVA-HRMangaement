@@ -1,0 +1,642 @@
+version: "2.0"
+stories:
+
+#------------------------------------------------ training management-------------------------------------------------
+
+- story: set login slot
+  steps:
+  - intent: login_data
+  - action: action_set_login_slots
+
+- story: Go_to_training_management_options
+  steps:
+  - intent: Training_Management
+  - action: action_check_logged_for_training_management
+
+- story: show_ongoing_trainings
+  steps:
+  - intent: Ongoing_trainings
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+  
+- story: show_ongoing_trainings
+  steps:
+  - intent: Ongoing_trainings
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_ongoing_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  
+- story: show_ongoing_trainings
+  steps:
+  - intent: Ongoing_trainings
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_ongoing_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_details
+  - slot_was_set:
+    - number_of_trainee: None
+  - slot_was_set:
+    - trainees: None
+  - slot_was_set:
+    - ordinal1: None
+  - slot_was_set:
+    - ordinal2: None
+  
+- story: show_ongoing_trainings
+  steps:
+  - intent: Ongoing_trainings
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_ongoing_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_details
+  - slot_was_set:
+    - number_of_trainee: None
+  - slot_was_set:
+    - trainees: None
+  - slot_was_set:
+    - ordinal1: None
+  - slot_was_set:
+    - ordinal2: None
+  
+- story: updated_status
+  steps:
+  - intent: update_status
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+  
+- story: updated_status1
+  steps:
+  - intent: update_status
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_ongoing_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  
+- story: updated_status2
+  steps:
+  - intent: update_status
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_ongoing_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_details
+  - slot_was_set:
+    - number_of_trainee: None
+  - slot_was_set:
+    - trainees: None
+  - slot_was_set:
+    - ordinal1: None
+  - slot_was_set:
+    - ordinal2: None
+  
+- story: updated_status3
+  steps:
+  - intent: update_status
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_ongoing_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_details
+  - slot_was_set:
+    - number_of_trainee: None
+  - slot_was_set:
+    - trainees: None
+  - slot_was_set:
+    - ordinal1: None
+  - slot_was_set:
+    - ordinal2: None
+  
+- story: show_completed_trainings3
+  steps:
+  - intent: Completed_training
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+  
+- story: show_completed_trainings4
+  steps:
+  - intent: Completed_training
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_completed_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  
+- story: show_completed_trainings1
+  steps:
+  - intent: Completed_training
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_completed_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - action: Topics_in_competency_form
+  - active_loop: Topics_in_competency_form
+  - active_loop: null
+  - action: action_Topics_in_competency_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_details
+  - action: Sub_Training_full_Detail_form
+  - active_loop: Sub_Training_full_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_full_Detail_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_details
+  - slot_was_set:
+    - number_of_trainee: None
+  - slot_was_set:
+    - trainees: None
+  - slot_was_set:
+    - ordinal1: None
+  - slot_was_set:
+    - ordinal2: None
+  
+- story: show_completed_trainings2
+  steps:
+  - intent: Completed_training
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_list_form
+  - active_loop: Training_list_form
+  - active_loop: null
+  - action: action_Training_list_form_submit
+  - action: action_show_completed_trainings
+  - action: sub_training_detail_form
+  - active_loop: sub_training_detail_form
+  - active_loop: null
+  - action: action_sub_training_detail_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_details
+  - slot_was_set:
+    - number_of_trainee: None
+  - slot_was_set:
+    - trainees: None
+  - slot_was_set:
+    - ordinal1: None
+  - slot_was_set:
+    - ordinal2: None
+  
+- story: show_Approved_training_requests
+  steps:
+  - intent: Approved_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+  
+- story: show_Approved_training_requests
+  steps:
+  - intent: Approved_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_approved_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Approved_training_requests
+  steps:
+  - intent: Approved_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_approved_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Approved_training_requests
+  steps:
+  - intent: Approved_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_approved_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Approved_training_requests
+  steps:
+  - intent: Approved_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_approved_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Approved_training_requests
+  steps:
+  - intent: Approved_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_approved_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: deny
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Approved_training_requests
+  steps:
+  - intent: Approved_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_approved_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Pending_training_requests
+  steps:
+  - intent: Pending_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+  
+- story: show_Pending_training_requests
+  steps:
+  - intent: Pending_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_pending_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Pending_training_requests
+  steps:
+  - intent: Pending_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_pending_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Pending_training_requests
+  steps:
+  - intent: Pending_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_pending_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Pending_training_requests
+  steps:
+  - intent: Pending_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_pending_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: affirm
+  - action: action_continue_with_sub_training_update
+  - intent: deny
+  - action: action_continue_with_sub_training_update
+  
+- story: show_Pending_training_requests
+  steps:
+  - intent: Pending_list
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: Training_request_list_form
+  - active_loop: Training_request_list_form
+  - active_loop: null
+  - action: action_Training_request_list_form_submit
+  - action: action_show_pending_training_request
+  - action: Sub_Training_request_Detail_form
+  - active_loop: Sub_Training_request_Detail_form
+  - active_loop: null
+  - action: action_Sub_Training_request_Detail_form_submit
+  - intent: deny
+  - action: action_continue_with_sub_training_update
+  
+# - story: employee_request_for_training
+#   steps:
+#   - intent: Request_for_training
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: false
+#   - action: utter_service_failed_login_message
+  
+# - story: employee_request_for_training
+#   steps:
+#   - intent: Request_for_training
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: true
+#   - action: request_for_training_training_form
+#   - active_loop: request_for_training_training_form
+#   - active_loop: null
+#   - action: action_request_for_training_training_form_submit
+#   - intent: affirm
+#   - action: request_for_training_training_form
+#   - active_loop: request_for_training_training_form
+#   - active_loop: null
+#   - action: action_request_for_training_training_form_submit
+  
+# - story: employee_request_for_training
+#   steps:
+#   - intent: Request_for_training
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: true
+#   - action: request_for_training_training_form
+#   - active_loop: request_for_training_training_form
+#   - active_loop: null
+#   - action: action_request_for_training_training_form_submit
+#   - intent: deny
+#   - action: utter_continue_Training_management
+  
+#   #  request for tarining if user is not logged In
+# - story: Employee_requested_for_training
+#   steps:
+#   - intent: requested_training
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: false
+#   - action: utter_service_failed_login_message
+
+#   # request for training if user is logged In
+# - story: Employee_requested_for_training
+#   steps:
+#   - intent: requested_training
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: true
+#   - action: action_show_requested_trainings
+

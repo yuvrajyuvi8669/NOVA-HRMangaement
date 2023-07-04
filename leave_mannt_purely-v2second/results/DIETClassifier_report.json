@@ -1,0 +1,59 @@
+{
+  "date": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {
+      "daterange": 1
+    }
+  },
+  "daterange": {
+    "precision": 0.9523809523809523,
+    "recall": 1.0,
+    "f1-score": 0.975609756097561,
+    "support": 20,
+    "confused_with": {}
+  },
+  "password": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1-score": 0.9,
+    "support": 10,
+    "confused_with": {}
+  },
+  "emp_code": {
+    "precision": 1.0,
+    "recall": 0.9375,
+    "f1-score": 0.967741935483871,
+    "support": 16,
+    "confused_with": {
+      "password": 1
+    }
+  },
+  "cancel_lr_id": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9672131147540983,
+    "recall": 0.9516129032258065,
+    "f1-score": 0.959349593495935,
+    "support": 62
+  },
+  "macro avg": {
+    "precision": 0.9704761904761906,
+    "recall": 0.9008333333333333,
+    "f1-score": 0.9286703383162864,
+    "support": 62
+  },
+  "weighted avg": {
+    "precision": 0.9685099846390169,
+    "recall": 0.9516129032258065,
+    "f1-score": 0.9580010659627929,
+    "support": 62
+  }
+}

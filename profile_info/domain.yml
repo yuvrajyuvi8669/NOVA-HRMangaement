@@ -1,0 +1,200 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- main_menu
+- login_data
+- pf_detail
+- salary_details
+- affirm
+- good
+- bad
+- okay
+- deny
+- data
+- no_of_days
+- greet
+- leaves
+- thanks
+- empID
+- DOJ
+- designation
+- grade
+- annual_ctc
+- gr_sal
+- bs_sal
+- uan
+- esic
+- pf
+- prof_info
+- logout
+- empid
+- pl_balance
+- cl_balance
+- plcl_balance
+- stop
+- other_employee_detail
+- seperate_detail_of_employee
+- bot_helping
+- bot_not_helping
+- are_you_bot
+- flirt_chat
+- sport_chat
+- joke_chat
+- weather_chat
+- who_built_you
+- coffee
+- origin_of_bot
+- chitchat
+entities:
+- emp_code
+- emp_code1
+- password
+slots:
+  emp_code:
+    type: text
+    influence_conversation: false
+  emp_code1:
+    type: list
+    influence_conversation: true
+  login_correct:
+    type: bool
+    influence_conversation: true
+  login_status:
+    type: bool
+    influence_conversation: true
+  logout_status:
+    type: bool
+    influence_conversation: true
+  password:
+    type: text
+    influence_conversation: true
+responses:
+  utter_are_you_bot:
+  - text: I am a bot, that's why they make me work 24 hours a day!
+  - text: I am just a bot, so they don't pay me the big bucks!
+  - text: I'm just a friendly bot, so go easy on me please
+  utter_ask_emp_code:
+  - text: Could you please help me with your employee code? (e.g. OMI-0090)
+  utter_ask_password:
+  - text: You are just one step away to get my help, Could you please help me with your password?
+  utter_continue_profile_service:
+  - buttons:
+    - payload: continue profile
+      title: Yes
+    - payload: home
+      title: No
+    text: Would you like to continue with my assistance?
+  utter_flirt_chat:
+  - text: Careful...one of us is married ;o)
+  - text: Steady on
+  - text: I'd rather have a nice cup of bot tea
+  utter_general/login:
+  - text: You can do login by using your employee code and password. This is the [link](http://mindsconnect.omfysgroup.com) to login in Mindsconnect application and in NOVA for your all details. If you want to commumicate with NOVA provide your login credential to NOVA when she will ask.
+  utter_general/new_employee:
+  - text: OMFYS is a Global IT company Headquartered in Croydon, United Kingdom. The India office is based out in Pune. The company provides Digital Transformation solutions and services to enterprises across the Globe. OMFYS offerings mainly include – Business Rule Engine Automation, Business Process Management Workflow Automation, AI Analytic Platform, Visualization Solutions, Oracle AI ChatBot Solutions, RPA and Cognitive Solutions, Digital Assistants (Chatbots), and other Cutting-edge Technology Integration Solutions on Cloud. OMFYS has highly skilled, well trained and motivated team ready to work cohesively to deliver IT solutions across UK, US & India. The business operations across the globe are efficiently supported by the company’s development centers located in UK and India.
+  utter_general/payslip:
+  - text: There are two ways to get payslip. 1)Through [Mindsconnect Application](http://mindsconnect.omfysgroup.com)  2) [Through NOVA](http://mindsconnect.omfysgroup.com). Ask NOVA to "download payslip" and follow the further procedure. You will get desired payslip then you can download it by clicking on link.
+  utter_general/townhall_meeting:
+  - text: Currently We haven't scheduled any townhall meeting. We'll notify you with date and link to join meeting when townhall meeting will be arranged
+  utter_general/training:
+  - text: You can do request for training(Internal/External) by using minds connect application or you can ask NOVA to create a training request. Nova will forward your training request to HR department. And when your request will get accept you can start your training.
+  utter_good:
+  - text: Thank you. I appreciate the acknowledgement
+  - text: Thank you!
+  - text: Thank you. I was hoping this was what you were looking for, and I really like it too
+  - text: Thank you. I’m glad you liked it!
+  - text: Thank you. I’m so glad that I Could help.
+  - text: righty-ho
+  utter_greet:
+  - buttons:
+    - payload: login
+      title: Login
+    text: Hey! I am NOVA. Your HR Digital Assitant. Could you please log in for my help?
+  utter_pf_detail: 
+    - buttons: 
+        - payload: "can you tell me about uan number"
+          title: UAN.
+        - payload: "tell me the pf number please"
+          title: "PF No."
+      text: "I may assist you on following details, please choose your requirement."
+  utter_initialize_message:
+  - buttons:
+    - payload: login
+      title: Login
+    text: Hey! I am NOVA. Your HR Digital Assitant. To be proceed please log in.
+  utter_invalid_login:
+  - buttons:
+    - payload: login
+      title: Login
+    text: Your [employee code/password] incorrect. Please provide valid credentials.
+  utter_joke_chat:
+  - text: What kind of salads do robots like.....one with ice-borg lettuce!
+  - text: Seriously, jokes are not my forte
+  - text: I've not yet been programmed for any really decent jokes
+  utter_profile_information:
+  - buttons:
+    - payload: tell me date of joining
+      title: DOJ
+    - payload: designation
+      title: Designation
+    - payload: tell me grade
+      title: Grade
+    - payload: Salary details
+      title: Salary Details
+    - payload: PF details
+      title: PF Details
+    - payload: esic
+      title: ESIC.
+    text: I may assist you on following details, please choose your requirement.
+  utter_salary_detail:
+  - buttons:
+    - payload: tell me annual ctc
+      title: Annual CTC
+    - payload: monthly gross salary
+      title: Monthly Gross Salary
+    - payload: monthly basic salary
+      title: Monthly Basic Salary
+    text: I may assist you on following details, please choose your requirement.
+  utter_service_failed_login_message:
+  - buttons:
+    - payload: login
+      title: Login
+    text: Your credentials are missing. Please provide them.
+  utter_sport_chat:
+  - text: Ok you got me there. Bots aren't that into sport.
+  - text: Sports make me sweaty and that plays havoc with my circuits
+  - text: Afraid sports ain't my thing
+  utter_thanks_response:
+  - text: It's my pleasure pal.
+actions:
+- action_check_logged_for_profile_service
+- action_check_login
+- action_check_login_for_pf_details
+- action_check_login_for_salary_details
+- action_check_login_status
+- action_get_DOJ
+- action_get_annual_ctc
+- action_get_checked_values
+- action_get_designation
+- action_get_empid
+- action_get_esic
+- action_get_grade
+- action_get_leave_eligibility
+- action_get_mbs
+- action_get_mgs
+- action_get_pf
+- action_get_profile_info
+- action_get_uan
+- action_logout
+- action_reset
+- action_set_login_slots
+- utter_are_you_bot
+- utter_flirt_chat
+- utter_greet
+- utter_joke_chat
+- utter_profile_information
+- utter_salary_detail
+- utter_sport_chat
+- utter_pf_detail

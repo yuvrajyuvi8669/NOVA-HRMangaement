@@ -1,0 +1,236 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- login_data
+- greet
+- goodbye
+- affirm
+- deny
+- approved_leaves
+- asking_for_pending_leaves
+- asking_for_one_leave
+- asking_for_one_leave_by_name
+- signin_of_employee
+- logout
+- empID
+- approve_reject_one_leave
+- emp_code_i
+entities:
+- ORG
+- PERSON
+- action
+- command
+- daterange
+- empCodeForleaveRequest
+- emp_code
+- emp_code1
+- leave_type
+- login_correct
+- login_status
+- name2
+- ordinal
+- password
+- reason
+- pending_leaves
+slots:
+  daterange:
+    type: text
+  empCodeForleaveRequest:
+    type: list
+    influence_conversation: true
+  emp_code:
+    type: text
+    influence_conversation: true
+  emp_code1:
+    type: list
+    influence_conversation: true
+  ordinal:
+    type: list
+    influence_conversation: true
+  name2:
+    type: text
+    # mappings:
+    # - type: from_entity
+    #   entity: name2
+    # - type: from_entity
+    #   entity: PERSON
+    # - type: from_entity
+    #   entity: name2
+    # - type: from_entity
+    #   entity: name2
+    # - type: from_entity
+    #   entity: name2
+    
+  action:
+    type: list
+    influence_conversation: true
+  login_correct:
+    type: bool
+    influence_conversation: true
+  login_status:
+    type: bool
+    influence_conversation: true
+  password:
+    type: text
+    influence_conversation: true
+  command:
+    type: text
+    influence_conversation: true
+  reason:
+    type: list
+    influence_conversation: true
+  leave_type:
+    type: list
+    auto_fill: false
+    influence_conversation: true
+  pending_leaves: 
+    type: text
+    
+responses:
+  utter_continue_leaves_service:
+  - buttons:
+    - payload: leave requests                                          #continue leave
+      title: Yes
+    # - payload: logout
+    #   title: Exit
+    - payload: home
+      title: No
+    text: Would you like to continue with my assistance?
+  utter_greet:
+  - buttons:
+    - payload: login
+      title: Login
+    text: Hey! I am NOVA. Your HR Digital Assitant. Could you please log in for my help?
+  utter_happy:
+  - text: Great, carry on!
+  # utter_help_sub_menu:
+  # - buttons:
+  #   - payload: leave requests
+  #     title: leave requests
+  #   text: Congratulations! You are to avail my assistance. You can choose features to get started or type in a direct message.
+  utter_help_user:
+  - buttons:
+    - payload: Profile Info
+      title: Profile Info
+    - payload: leaves
+      title: Leave Management
+    - payload: Trainings
+      title: Trainings
+    - payload: Projects management
+      title: Project Mgmt.
+    - payload: Enquiries
+      title: Enquiries
+    - payload: logout
+      title: Exit
+    text: Congratulations! You are to avail my assistance. You can choose features to get started or type in a direct message.
+  utter_help_user_after_loggedin:
+  - buttons:
+    - payload: Profile Info
+      title: Profile Info
+    - payload: leaves
+      title: Leave Management
+    - payload: Trainings
+      title: Trainings
+    - payload: Projects management
+      title: Project Mgmt.
+    - payload: Enquiries
+      title: Enquiries
+    - payload: logout
+      title: Exit
+    text: You are to avail my assistance. You can choose features to get started or type in a direct message.
+  utter_service_failed_login_message:
+  - buttons:
+    - payload: login
+      title: Login
+    text: Your credentials are missing. Please provide them.
+  utter_wrong_command:
+  - text: Do you want to approve or reject leave request?
+  - text: Could you please provide me your decision regarding approval and rejection of leave request?
+  utter_wrong_empCodeForleaveRequest:
+  - text: Incorrect employee code
+  utter_wrong_emp_code:
+  - text: Hey! It seems you have entered wrong employee ID.
+  utter_wrong_password:
+  - text: Hey! It seems you have entered wrong password.
+  utter_goodbye:
+  - text: Talk to you later
+  utter_already_logged_out_meesage:
+  - text: You are already logged out...
+  utter_ask_reason:
+  - text: Could you please give me the reason of rejection of leave request?
+  - text: Could you please give me your reason of rejection of leave request?
+  - text: Please give me reason of rejection.
+  utter_ask_command:
+  - text: Do you want to approve or reject leave request?
+  - text: Could you please provide me your decision regarding approval and rejection of leave request?
+  utter_ask_empCodeForleaveRequest:
+  - text: Please mention the employee code of employee
+  utter_ask_name2:
+  - text: Could you please help me with name/employee code of employee?
+  utter_wrong_name2:
+  - text: You may be entered incorrect name
+  utter_ask_required_end_date:
+  - text: Could you please help me with planned end date?[e.g DD-MMM-YYYY/23rd May]
+  utter_ask_required_start_date:
+  - text: Could you please help me with planned training start date?[e.g DD-MMM-YYYY/23rd May]
+  utter_end_date_greater_than_start_date:
+  - text: Provided end date must be greater than start date
+
+actions:
+- action_check_login
+- action_check_login_status
+- action_confirmationBoxform_submit
+- action_emp_code_collect_form_submit
+- action_get_checked_values
+- action_get_list_of_pending_approval
+- action_get_one_pending_approval
+- action_get_one_pending_approval_by_name
+- action_set_login_slots
+- action_show_approved_leaves
+- action_show_confirmation_box
+- action_single_approval_form_submit
+- action_single_approval_name_form_submit
+- action_user_login_form_submit
+- utter_greet
+- validate_confirmationBoxform
+- validate_emp_code_collect_form
+- validate_single_approval_form
+- validate_single_approval_name_form
+- validate_user_login_form
+- action_get_login_details
+
+forms:
+  confirmationBoxform:
+    command:
+    - entity: command
+      type: from_entity
+    ordinal:
+    - entity: ordinal
+      type: from_entity
+  emp_code_collect_form:
+    command:
+    - type: from_entity
+      entity: command
+    empCodeForleaveRequest:
+    - type: from_entity
+      entity: empCodeForleaveRequest
+    reason:
+    - type: from_text
+  single_approval_form:
+    emp_code1:
+    - entity: emp_code1
+      type: from_entity
+  single_approval_name_form:
+    name2:
+    - entity: name2
+      type: from_entity
+    - type: from_text
+  user_login_form:
+    emp_code:
+    - type: from_text
+      entity: emp_code
+    password:
+    - type: from_text
+      entity: password

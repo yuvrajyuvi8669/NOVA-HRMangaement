@@ -1,0 +1,525 @@
+version: "2.0"
+nlu:
+- intent: empID
+  examples: |
+    - tell me employee id
+    - do you know emp id?
+    - empid
+    - EMPID
+    - EmpId
+    - my employee code
+- intent: affirm
+  examples: |
+    - yeah a cheap restaurant serving international food
+    - correct
+    - ye
+    - uh yes
+    - let's do it
+    - yeah
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that
+    - yeeessssss
+    - you got it
+    - it's correct
+    - go ahead please
+- intent: deny
+  examples: |
+    - no
+    - no new selection
+    - no thanks
+    - no thank you
+    - uh no
+    - breath no
+    - do you have something else
+    - no this does not work for me
+    - no indeed
+    - absolutely not
+    - most certainly not
+    - of course not
+    - under no circumstances
+    - by no means
+    - not at all
+    - negative
+    - never
+    - not really
+    - nae
+    - nope
+    - nah
+    - not on your life
+    - no way
+    - no fear
+    - not on your nelly
+    - no siree
+    - naw
+    - nay
+    - something is missing
+    - few are wrong
+- intent: DOJ
+  examples: |
+    - tell me date of joining
+    - do you know doj?
+    - doj
+    - DOJ
+    - when i joined company?
+    - when i started the work in this company?
+    - Could you say me my joining date?
+- intent: annual_ctc
+  examples: |
+    - tell me annual ctc
+    - do you know annual ctc
+    - ctc
+    - CTC
+    - my ctc
+    - how much ii get in CTC?
+    - How much my ctc?
+- intent: apply_cl
+  examples: |
+    - allow me cl
+    - apply for cl
+    - for cl apply
+    - i want apply for CL
+- intent: apply_lwp
+  examples: |
+    - allow me lwp
+    - apply for lwp
+    - for lwp apply
+    - allow me leave without pay
+    - apply for leave without money
+    - for leave without paid
+- intent: apply_pl
+  examples: |
+    - allow me pl
+    - apply for pl
+    - for pl apply
+- intent: bs_sal
+  examples: |
+    - tell me about basic salary?
+    - basic salary please?
+    - basic salary
+    - BASIC SALARY
+    - i want to know about my basic salary
+    - could you say me my basic salary?
+- intent: chitchat
+  examples: |
+    - What are you?
+    - How are you? you stuip dump
+- intent: cl_balance
+  examples: |
+    - cl balance please?
+    - How many cl's I got?
+    - how much cl's left for me?
+    - how many cl remaining?
+    - how many cl i got?
+    - remaining cl's please.
+    - how many cl's are there?
+    - what is my cl status?
+    - how much cl's i got
+    - cl's count please?
+- intent: login_data
+  examples: |
+    - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-83](emp_code) and password is [Shdhf$765](password)
+    - employee code is [OMI-83](emp_code) and password is [sfju$234](password)
+    - employee code is [OMI-1083](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-0005](emp_code) and password is [Rmdfr@435](password)
+    - emp code is [OMI-83](emp_code)
+    - emp code for you [OMI-83](emp_code)
+    - code is [OMI-83](emp_code)
+    - the employee code is [OMI-83](emp_code)
+    - my employee code is [OMI-1036](emp_code)
+    - the code is [OMI-1436](emp_code)
+    - [OMI-5546](emp_code) is my employee code
+    - employee code is [OMI-1036](emp_code) and password is [Omfys@123](emp_code)
+- intent: designation
+  examples: |
+    - do you know designation?
+    - me designation
+    - what is my designation
+    - designation
+    - DESIGNATION
+    - my designation
+    - i want get my designation
+    - on which desination am i working?
+- intent: esic
+  examples: |
+    - do you know esic number
+    - yeah can you tell me esic number
+    - hey tell me something about esic no.
+    - esic
+    - ESIC
+    - my esic number
+    - esic number
+    - my esic
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - bye bye
+    - see ya
+    - see you later
+- intent: gr_sal
+  examples: |
+    - tell me about gross salary?
+    - gross salary please?
+    - gross salary
+    - GROSS SALARY
+- intent: grade
+  examples: |
+    - tell me grade
+    - do you know grade?
+    - grade
+    - GRADE
+- intent: greet
+  examples: |
+    - Hello
+    - hello
+    - hey
+    - hi
+    - heya
+    - howdy
+    - hey there
+    - Hi
+    - h
+- intent: logout
+  examples: |
+    - logout please
+    - logout
+    - out
+    - exit
+    - get out
+    - get me out
+    - go away
+    - Exit
+    - i want to exit
+    - please logout me
+    - please exit it
+    - #
+    - ##
+    - ###
+    - #############
+- intent: origin_of_bot
+  examples: |
+    - When did you born
+    - I am from future. Just kidding....
+- intent: out_of_scope
+  examples: |
+    - lsjfsdjfsdjf
+    - jsdfye
+    - heysdfl you go out
+    - hi skdjfsdj
+- intent: pf
+  examples: |
+    - tell me the pf number please
+    - pf number please
+    - can i know my pf number
+    - pf
+    - PF
+    - pf no
+    - pf number
+    - i want to know about my pf number
+    - tell me my pf no
+    - tell me my pf number
+    - i want my pf number
+- intent: pl_balance
+  examples: |
+    - pl balance please?
+    - How many pl's I got?
+    - how much pl's left for me?
+    - how many pl remaining?
+    - how many pl i got?
+    - remaining pl's please.
+    - how many pl's are there?
+    - what is my pl status?
+    - how much pl's i got
+    - pl's count please?
+- intent: plcl_balance
+  examples: |
+    - tell me both plcl balance please?
+    - How many plcl's I got?
+    - how much plcl's left for me?
+    - how many plcl remaining?
+    - how many pl cl i got?
+    - remaining pl cl's please.
+    - how many pl cl's are there?
+    - what is my pl cl status?
+    - how much pl cl's i got
+    - pl cl's count please?
+- intent: main_menu
+  examples: |
+    - home
+    - go to main menu
+    - show me main menu
+    - Home
+    - main menu
+    - Main menu
+    - #
+    - #main
+    - Main Menu
+    - hm
+    - Nova main menu
+    - services provided by nova
+    - Nova services
+    - nova services
+    - services by nova
+
+
+- intent: prof_info
+  examples: |
+    - Profile Info
+    - What is the profile info?
+    - Tell me info about profile?
+    - Give me some inf please?
+    - Show me my profile
+    - I wonder what is my profile info?
+    - profile info please?
+    - Tell me profile information
+    - Is the profile info there?
+    - Please tell me profile info you bot?
+    - Haa haa profile info please?
+    - Show me pro info
+    - look into my info
+    - information please?
+    - Oh, sorry, tell me about myself
+    - tell me about me
+    - Current profile info
+    - What is the personal info?
+    - I wonder what is my personal info?
+    - personal info please?
+    - Tell me personal information
+    - Is the personal info there?
+    - Please tell me personal info you bot?
+    - Haa haa personal info please?
+    - Current personal info
+    - Tell me info about profile
+    - continue
+    - prof info
+    - continue profile info
+    - continue profile
+
+- intent: pf_detail
+  examples: |
+    - my pf details please
+    - could you show me my pf detail
+    - i want my pf details
+    - pf related information
+    - pf details
+    - PF details
+
+- intent: salary_details
+  examples: |
+    - my salary details please
+    - could you show me my salary detail
+    - salary details
+    - Salary details
+    - salary
+    - my salary details
+    - my salary detail
+
+- intent: uan
+  examples: |
+    - can you tell me about uan number
+    - what is my UAN no.
+    - UAN no please
+    - uan
+    - UAN
+
+- intent: stop
+  examples: |
+    - stop please
+    - stop
+
+- intent: bot_helping
+  examples: |
+    - you are really helpful
+    - got it
+    - nice one
+    - cool!
+    - gret
+    - grt
+    - thanks for your help
+    - roger
+    - roger!
+    - Loving it
+    - awsome
+    - LOL!
+    - cool
+    - understand
+    - understood
+
+- intent: bot_not_helping
+  examples: |
+    - you know nothing
+    - uselesssssssss
+    - usles
+    - you don't know alot
+    - is that supposed to help me
+    - how is that helping
+    - what is the use of that
+    - This did not help me
+    - you don't know much
+    - you are not helping me much
+    - that did not help me
+    - you don't know do you
+    - what use is that
+    - That didn't help me
+    - you are not helping
+
+- intent: are_you_bot
+  examples: |
+    - who are you
+    - You are a bot, are you
+    - who am I speaking to
+    - are you a bot?
+    - are you a robot
+    - Are you a bot or a human?
+    - are you a girl
+    - you're not human, are you?
+    - You are a computer
+    - Machine learning is you, isn't it
+    - are you a boy
+    - are you a digital assistant
+    - Oh boy, you're a chatbot
+    - are you a chatbot
+    - are you a boy or a girl
+    - are you human
+    - Are you human?
+    - are you real
+    - Am I speaking with a chatbot?
+    - Am I talking to a bot?
+
+- intent: flirt_chat
+  examples: |
+    - I like to take you out
+    - would you like to slip into something more comfortable
+    - lets have sex
+    - Would you like to go dancing with me
+    - hey babe tell me about yourself
+    - I like to ask you out
+    - Do you love me
+    - what are you wearing
+    - can you send me pictures of yourself
+    - are you a good lover
+    - Can I ask you out
+    - How do you kiss
+    - Will you go out for dinner with me?
+    - fancy a date
+    - Can you kiss
+    - Describe yourself to me please
+    - I wanna give you a hug. Where can I do this?
+    - Can I date you?
+    - will you join me for lunch?
+    - How do you like me?
+    - Do you want to kiss
+    - I wanna date you
+    - do you want to make love
+    - Imagine how you look
+    - I want to marry you
+    - Do you have a friend
+    - can you describe how you are looking?
+    - fancy going on a date
+    - Do you want to go to the movies with me?
+
+- intent: sport_chat
+  examples: |
+    - what is your favourite soccer team
+    - Who won the premier league?
+    - Who do you bet for in the play offs?
+    - do you like football
+    - Are you a fan of Manchester United
+    - What sport do you like?
+    - I am holding my break for the Philly Flyers
+    - Which hockey team do you support?
+    - What is your favourite soccer player?
+    - do you watch NHL, NBA or World Series?
+    - Do you watch ESPN, BBC sports or Euro sport
+    - Are you into football?
+    - Who do you are?
+    - Do you like sports
+
+- intent: joke_chat
+  examples: |
+    - cheer me up
+    - I am looking for something funny
+    - tell me a one liner
+    - Hey, tell me a joke
+    - Sure you don't know a joke
+    - Do you have more?
+    - cheer me up a bit
+    - Make me laugh
+    - I like to giggle a bit
+    - Are you funny?
+    - show me how funny you can be
+    - can you be funny?
+    - do you have something funny for me?
+    - how about jokes
+    - do you tell jokes
+    - What about a joke
+    - One more joke please
+    - do you have another one
+    - make me lough
+    - Give me another one
+
+- intent: weather_chat
+  examples: |
+    - is it going to be sunny all week
+    - What is the weather
+    - What's the weather like
+    - is there anything like bad weather
+    - Will it rain
+    - give me a weather quote
+    - What  is the weather like
+    - Its really hot in here
+    - How is the weather today
+    - Do you know if the sun is shining today?
+    - where do I find snow today
+    - We had a thunderstorm yesterday
+    - please forecast the weather for me
+    - will it train tomorrow
+    - Get me to where thunderstorms are
+    - Its cold outside, what do you think
+    - Where do you live?
+    - can you tell me about the weather tomorrow
+
+- intent: who_built_you
+  examples: |
+    - what technology were you built with
+    - who developed you?
+    - What were you developed on?
+    - what platform were you developed on?
+    - what platform are you based on
+    - what technology were you built
+    - Who built you?
+    - Who is your master?
+    - Who is the developer?
+    - Who is your master
+    - who developed you
+    - what platform are you built on
+    - Who built you
+
+- intent: coffee
+  examples: |
+    - Do you drink coffee?
+    - How many cups do you drink per day?
+    - When do you drink coffee?
+    - Do you drink it at the same time every day?
+    - How do you like your coffee? Black or white? Sugar or no sugar?
+    - How do you feel when you drink coffee?
+    - How do you feel when you drink too much coffee?
+    - Many people think espresso is too bitter. Can you drink one?
+    - What’s your favorite coffee shop?
+    - Would you like to grab a coffee next week?
+    - I would love to meet for a coffee
+    - What is coffee? What is green coffee?
+
+- regex: emp_code
+  examples: |
+    - ^(OMI-)[0-9]{4}

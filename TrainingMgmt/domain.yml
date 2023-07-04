@@ -1,0 +1,291 @@
+version: "2.0"
+
+session_config: 
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+
+intents:
+  - requested_training
+  - update_status
+  - status_of_training
+  - training_type
+  - number_of_trainee_details
+  - trainee_details
+  - Training_request
+  - Training_Management
+  - Ongoing_trainings
+  - Completed_training
+  - Approved_list
+  - Pending_list
+  - Request_for_training
+  - affirm
+  - deny
+  - Training_specification
+  - stop
+  - login_data
+
+entities:
+  - emp_code
+  - password  
+  - competency
+  - required_training_title
+  - required_training_type
+  - required_training_mode
+  - required_training_trainer
+  - required_training_exttrainer
+  - required_training_exttrainer_mb_no
+  - required_training_exttrainer_email_id
+  - required_start_date
+  - required_end_date
+  - required_training_link
+  - required_training_cost
+  - competencies
+  - competencyrequired_training_delivery
+  - trainings_period
+  - specific_training
+  - ordinal
+
+slots:
+  daterange: 
+    type: list
+  login_status: 
+    type: bool
+  logout_status: 
+    type: bool
+  ordinal: 
+    type: list
+  ordinal1: 
+    type: list
+  ordinal2: 
+    type: list
+  ordinal3: 
+    type: list
+  ordinal3_training: 
+    type: list
+  status: 
+    type: list    
+  trainees: 
+    type: list
+  trainees_for_request: 
+    type: list
+  trainer_name: 
+    type: list
+  training_category: 
+    type: list
+  training_end_time: 
+    type: list
+  training_id: 
+    type: list
+  training_name: 
+    type: list
+  training_start_time: 
+    type: list
+  training_type: 
+    type: list
+  training_type_decision: 
+    type: list
+  training_type_trainee: 
+    type: list
+  trainings_period: 
+    type: list  
+  emp_code: 
+    type: text
+    influence_conversation: true
+  password:
+    type: text
+    influence_conversation: true
+  compentencies: 
+    type: list
+  compentency_group: 
+    type: list
+  competency: 
+    type: list
+  number_of_trainee:
+    type: list
+  number_of_trainee_for_request: 
+    type: list
+  required_end_date: 
+    type: list
+  required_start_date: 
+    type: list
+  required_training_cost: 
+    type: list
+  required_training_delivery:
+    type: list
+  required_training_exttrainer: 
+    type: list
+  required_training_exttrainer_email_id: 
+    type: list
+  required_training_exttrainer_mb_no: 
+    type: list
+  required_training_link: 
+    type: list
+  required_training_mode: 
+    type: list
+  required_training_title: 
+    type: list
+  required_training_trainer: 
+    type: list
+  required_training_type: 
+    type: list
+  specific_training: 
+    type: list
+
+actions:
+  - validate_Topics_in_competency_form
+  - validate_request_for_training_training_form
+  - validate_Training_list_form
+  - validate_sub_training_detail_form
+  - validate_Sub_Training_full_Detail_form
+  - validate_Training_request_list_form
+  - validate_Sub_Training_request_Detail_form
+  - action_get_login_details
+  - action_check_logged_for_training_management
+  - action_check_login_status
+  - action_Training_list_form_submit
+  - action_show_ongoing_trainings
+  - action_sub_training_detail_form_submit
+  - action_continue_with_sub_training_details
+  - action_Topics_in_competency_form_submit
+  - action_Sub_Training_full_Detail_form_submit
+  - action_request_for_training_training_form_submit
+  - action_Training_request_list_form_submit
+  - action_show_approved_training_request
+  - action_Sub_Training_request_Detail_form_submit
+  - action_continue_with_sub_training_update
+  - action_show_pending_training_request
+  - action_show_completed_trainings
+  - action_show_requested_trainings
+  - action_set_login_slots
+
+forms:
+  Topics_in_competency_form:
+      competency:
+      - type: from_entity
+        entity: competency
+  request_for_training_training_form:
+    required_training_title:
+      - type: from_entity
+        entity: required_training_title
+    required_training_type:
+      - type: from_entity
+        entity: required_training_type
+    required_training_mode:
+      - type: from_entity
+        entity: required_training_mode
+    required_training_trainer:
+      - type: from_entity
+        entity: required_training_trainer
+    required_training_exttrainer:
+      - type: from_entity
+        entity: required_training_exttrainer
+    required_training_exttrainer_mb_no:
+      - type: from_entity
+        entity: required_training_exttrainer_mb_no
+    required_training_exttrainer_email_id:
+      - type: from_entity
+        entity: required_training_exttrainer_email_id
+    required_start_date:
+      - type: from_entity
+        entity: required_start_date
+    required_end_date:
+      - type: from_entity
+        entity: required_end_date
+    required_training_link:
+      - type: from_entity
+        entity: required_training_link
+    required_training_cost:
+      - type: from_entity
+        entity: required_training_cost
+    competencies:
+      - type: from_entity
+        entity: competencies
+    required_training_delivery:
+      - type: from_entity
+        entity: competencyrequired_training_delivery
+  Training_list_form:
+    trainings_period:
+      - type: from_entity
+        entity: trainings_period
+    specific_training:
+      - type: from_entity
+        entity: specific_training
+    number_of_trainee:
+      - type: from_entity
+        entity: number_of_trainee
+    trainees:
+      - type: from_entity
+        entity: trainees
+    compentency_group:
+      - type: from_entity
+        entity: compentency_group
+  sub_training_detail_form:
+    ordinal1:
+      - type: from_entity
+        entity: ordinal
+  Sub_Training_full_Detail_form:
+    ordinal2:
+      - type: from_entity
+        entity: ordinal
+    ordinal3_training:
+      - type: from_entity
+        entity: ordinal
+    training_type_traine:
+      - type: from_entity
+        entity: training_type_traine
+    status:
+      - type: from_entity
+        entity: status
+    training_start_time:
+      - type: from_entity
+        entity: training_start_time
+    training_end_time:
+      - type: from_entity
+        entity: training_end_time
+    training_type_decision:
+      - type: from_entity
+        entity: training_type_decision
+  Training_request_list_form:
+    number_of_trainee_for_request:
+      - type: from_entity
+        entity: ordinal
+    trainees_for_request:
+      - type: from_entity
+        entity: trainees_for_request
+    compentency_group:
+      - type: from_entity
+        entity: compentency_group
+    training_period:
+      - type: from_entity
+        entity: training_period
+    specific_training:
+      - type: from_entity
+        entity: specific_training
+  Sub_Training_request_Detail_form:
+    ordinal:
+      - type: from_entity
+        entity: ordinal
+
+responses:
+  utter_service_failed_login_message: 
+      - buttons: 
+          - payload: login
+            title: Login
+        text: "Your credentials are missing. Please provide them."
+  utter_continue_Training_management: 
+    - buttons: 
+        - payload: "continue with Training management"
+          title: "Continue with Training Management"
+      text: "Would you like to continue with my assistance?"
+  utter_ask_emp_code: 
+    - text: Could you please help me with your employee code? (e.g. OMI-0090)
+  utter_ask_password: 
+    - text: You are just one step away to get my help, Could you please help me with your password?
+  utter_greet: 
+    - buttons: 
+        - payload: login
+          title: Login
+      text: "Hey! I am NOVA. Your HR Digital Assitant. Could you please log in for my help?"
+  utter_logout_meesage: 
+    - text: "You have successfully logged out..."
+  

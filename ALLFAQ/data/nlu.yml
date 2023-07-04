@@ -1,0 +1,528 @@
+version: "2.0"
+
+nlu:
+
+
+
+- intent: login_data
+  examples: |
+    - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-83](emp_code) and password is [Shdhf$765](password)
+    - employee code is [OMI-83](emp_code) and password is [sfju$234](password)
+    - employee code is [OMI-1083](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-0005](emp_code) and password is [Rmdfr@435](password)
+    - emp code is [OMI-83](emp_code)
+    - emp code for you [OMI-83](emp_code)
+    - code is [OMI-83](emp_code)
+    - the employee code is [OMI-83](emp_code)
+    - my employee code is [OMI-1036](emp_code)
+    - the code is [OMI-1436](emp_code)
+    - [OMI-5546](emp_code) is my employee code
+    - employee code is [OMI-1036](emp_code) and password is [Omfys@123](emp_code)
+
+
+
+
+- intent: attendance/regular_office_timing
+  examples: |
+    - I want to know about regular office timing
+    - regular office timing
+    - daily office timing
+
+- intent: attendance/working_days
+  examples: |
+    - Which are the working days?
+    - What are the working days?
+    - On which days do you work?
+    - When does the office work?
+    - How many working days are there?
+    - Which days are working?
+    - During what days of the week will you be working?
+    - When is the work day?
+    - The working days are Monday through Friday.
+    - What are the hours of operation?
+    - Are there working days?
+
+- intent: attendance/weekly_off
+  examples: |
+    - Which are weekly off?
+    - What are the weekly off days?
+    - Which days are off every week?
+    - Is there a weekly off week?
+    - Can you tell me which days are weekly off?
+    - Which weeks are off?
+    - What are your weekly off days?
+    - Are there any weekly off days?
+    - Which of these are weekly off days?
+    - Who gets a week off?
+
+- intent: attendance/office_timing
+  examples: |
+    - What is office timings?
+    - What are the office hours?
+    - When do offices close?
+    - When does the office open and close?
+    - What is the office schedule?
+    - When are office hours?
+    - Office hours: what are they?
+    - When is office time?
+    - Is there a schedule for the office?
+    - The office hours are: When do they start and end?
+    - Is there an office schedule?
+
+- intent: attendance/late_extreme_emergency
+  examples: |
+    - What if I come late due to an extreme emergency?
+    - What if I arrive late because of an extreme emergency
+    - If there is an emergency that causes me to arrive late
+    - In the case of an extreme emergency, I may be late
+    - In the event of an emergency, what happens if I am late?
+    - Can I come late if I have an extreme emergency
+    - In the event that I arrive late due to an emergency situation
+    - In case of an emergency, can I arrive late
+    - If I need to arrive late because of a serious emergency, what should I do?
+    - What if I am unable to make it on time owing to an emergency
+    - If my attendance is delayed due to an urgent situation, what will I do?
+
+- intent: attendance/late_to_office
+  examples: |
+    - Can I come late to office?
+    - Can I come late to work?
+    - Is it okay to arrive late at work?
+    - Do you allow late arrivals to the office?
+    - Is it alright if I come to work late?
+    - Is it okay for me to come in late to work?
+    - Is it okay if I arrive late?
+    - Would it be OK if I came late to work?
+    - Am I allowed to arrive at the office late?
+    - Could I arrive late to work?
+    - Will you allow me to arrive late?
+
+
+- intent: attendance/early_office
+  examples: |
+    - Can I go early from office?
+    - Is it possible to leave the office early?
+    - Can I leave early from work?
+    - Do you allow early departures from office?
+    - Is there a possibility I can leave early from work?
+    - May I leave work early?
+    - Would it be possible for me to leave early from work?
+    - Am I allowed to leave office early?
+    - Will you let me leave for home early?
+    - Can I go early from work?
+    - What are my chances of leaving early from work?
+
+- intent: attendance/grace_period
+  examples: |
+    - What if I come late upon consuming of grace period?
+    - What if I arrive late after consuming the grace period?
+    - Is there a penalty for arriving late?
+    - What if I come late after the grace period has expired?
+    - When I am late after I have consumed the grace period, what should I do?
+    - How can I ensure that I come on time after consuming my grace period?
+    - Could I be late upon the expiration of grace period?
+    - Can I come late once the grace period is over?
+    - What happens if I arrive late after I've exhausted the grace period?
+    - Suppose I come late after using up the grace period?
+    - In the case of late arrival after the grace period has expired, what happens?
+
+- intent: attendance/training_and_application_of_leave
+  examples: |
+    - I am in Training Period, am I eligible to apply for PL/CL?
+    - During my training period, am I eligible to apply for PL/CL?
+    - Do I qualify for PL/CL if I am in my Training Period?
+    - I am in training, can I apply for PL/CL?
+    - Do I qualify to apply for PL/CL during the Training Period?
+    - PL/CL are available to those who are in training period, am I eligible?
+    - In the training period, is it possible to apply for PL/CL?
+    - Could I apply for PL/CL while I am undergoing training?
+    - Can I apply for PL/CL while I am in training?
+    - While I am training, would I be able to apply for PL/CL?
+    - Would it be possible for me to apply for PL/CL while I am undergoing training?
+    - During training can I apply for PL/CL?
+    - When I am training, may I apply for PL/CL?
+    - Would I be able to apply for a PL/CL while undergoing training?
+    - Do I qualify for PL/CL while I am training?
+    - While I am in training, is it possible for me to apply for PL/CL?
+    - If I am in training, can I apply for PL/CL?
+
+
+- intent: attendance/probation_and_application_of_leave
+  examples: |
+    - I am on Probation period; can I apply PL/CL?
+    - Can I apply for PL/CL if I am on probation?
+    - On probation, am I eligible to apply for probationary leave or conditional leave?
+    - Can I apply for P/CL while on probation?
+    - PL/CL are available to those on probation, can they be applied to me?
+    - Can a person on probation apply for PL or CL?
+    - PL/CL is available to me if I am on probation?
+    - What are the chances I can qualify for probationary or probationary leave?
+    - I am currently awaiting the results of my probation; can I apply for PL/CL?
+    - What if I am on probation period? Can I apply for both PL and CL?
+    - Can I apply for PL/CL while I am on probation?
+
+- intent: attendance/joining_and_application_of_leave
+  examples: |
+    - Can I apply my leaves by joining weekends & holidays?
+    - Is it possible to apply my leaves to weekends and holidays?
+    - What if I join weekends and holidays during my leave?
+    - Do I have the option of joining weekends and holidays when I have leave?
+    - When I join weekends & holidays, can I apply my leaves?
+    - What are my options for applying my holidays and weekends?
+    - May I use my leave by joining weekends & holidays?
+    - Am I allowed to apply my leave over weekends and holidays?
+    - Can I take my leave on weekends & holidays?
+    - Do weekends and holidays count as weekends and holidays?
+    - My leave can be used for weekends and holidays.
+
+- intent: attendance/no_of_CL
+  examples: |
+    - How many CL's will get credit in my leave account?
+    - My leave account will be credited with how many CL's
+    - Will my leave account be credited with the number of CL's
+    - The number of Casual leave credits will get credited to my leave account? 
+    - In my leave account, how many CL's
+    - Will I receive credit for a number of CL's?
+    - My leave account will be credited with how many CLs?
+    - What are the number of CLs that will be credited to my leave account?
+    - When will my leave account be credited with CLs?
+    - To my leave account, how many CLs will be credited?
+    - Is my leave account going to be credited with how many CLs?
+
+- intent: attendance/no_of_PL
+  examples: |
+    - How many PL's will get credit in my leave account?
+    - How many PL's will be credited to my leave account?
+    - What is the number of leave credits I will receive?
+    - Can I get credit for how many leave days in my account?
+    - Will my leave account be credited with how many PLs?
+    - How many paid leaves will I receive credit for?
+    - How many leave credits will I get in my leave account?
+    - How many days will I be credited for my leave account?
+    - Is there a limit to the number of PL's I can add to my leave account?
+    - My leave account will receive how many days of paid leave?
+    - Is my leave account going to credit me PLs?
+
+- intent: attendance/consider_as_half_day
+  examples: |
+    - In which case I would be considered as a half day present?
+    - If so, would I be considered a half-day present?
+    - What happens if I present myself for half a day?
+    - Would that make me a half-day present?
+    - Could I be considered as a half day present in that case?
+    - What if I were a half-day present?
+    - Then I would be counted as a half-day present?
+    - Is that considered a half-day present?
+    - So I would be considered a half day present if that's the case?
+    - In that case, would I be treated as a half-day present?
+    - So I'm considered a half-day present then?
+
+- intent: attendance/consider_as_full_day
+  examples: |           
+    - In which case I would be considered as full day absent though I came to office?
+    - Would I still be counted as absent if I came to work that day?
+    - If I come to work, do I count as being absent for the full day?
+    - Is it still counted as a full day absent even if I arrived at work?
+    - In which case would I be considered absent from work even if I came in?
+    - When I attend work, am I considered to have been absent the whole day?
+    - Is it the case that I would be considered absent despite coming to work part-time?
+    - I was still considered absent in that case, even though I came to work?
+    - How would I be considered absent on a full day even if I showed up to work?
+    - What if I came to work despite missing a full day?
+    - Will I be considered absent though I came to office if I am absent for the day?
+
+- intent: attendance/days_before_apply_for_leaves
+  examples: |           
+    - How many days in advance I need to apply for leaves?
+    - When should I apply for leaves?
+    - How far in advance should I apply for leaves?
+    - What is the deadline for requesting leave?
+    - I need to apply for leave how many days in advance?
+    - Is it necessary for me to apply for leaves a few days in advance?
+    - How many days before the start of the leave should I apply?
+    - Can I request leave up to 30 days in advance?
+    - What's the deadline for applying for leave?
+    - Should I request a leave of absence several days in advance?
+    - In what amount of time should I make my leave request?
+    - How soon do I need to submit a leave application?
+
+
+- intent: general/login
+  examples: |
+    - How do I login?
+    - how to do login?
+    - process to login into account.
+    - how to do login to avail the services?
+    
+- intent: general/payslip
+  examples: |
+    - how to get payslip?
+    - process to get payslip.
+    - how to avail payslip
+
+- intent: general/new_employee
+  examples: |
+    - Which technologies are present in our organization?
+    - technologies available in our organization.
+    - information about this OMFYS organization
+    - about OMFYS
+    - about OMFYS Information
+
+- intent: general/training
+  examples: |
+    - I would like to undergo training, what should I do?
+    - How can I request for training?
+    - Can I request for external training?
+    - Can I request for internal training?
+    - How will come to know competencies planned for my training?
+    - What is start and end date of my planned / in progress training?
+
+- intent: general/townhall_meeting
+  examples: |
+    - Town hall meeting schedule and link?
+    - i want Town hall meeting schedule and link
+    - nova please provide me townhall meeting link
+    - schedule of townhall meeting
+
+- intent: travel/local_conveyance 
+  examples: |
+    - What is local conveyance? 
+    - What exactly is local transportation?
+    - What is the definition of local transportation?
+    - What is local transportation?
+    - What exactly is local conveyance?
+    - What exactly is local transportation?
+
+- intent: travel/per_diem
+  examples: |
+    - What is mean by Per-Diem?
+    - What does Per-Diem mean?
+    - What does it mean to be on a per-diem basis?
+    - What does it mean to be on a per-diem basis?
+    - What exactly does the term "per diem" mean?
+    - What precisely does the expression "outlay" mean?
+
+- intent: travel/liquour_expenses
+  examples: |
+    - Can I get reimbursement on Liquor expenses?
+    - Can I get reimbursed for my liquor purchases?
+    - Is it possible to receive reimbursed for my liquor purchases?
+    - Is it feasible to get my liquor purchases reimbursed?
+    - Can I get reimbursed for my liquor purchases?
+    - Will my liquor purchases be reimbursed?
+    - Can I get reimbursement on Liquor expenses?
+    - Will I get reimbursed for my liquor purchases?
+    - Is it possible to receive reimbursed for my liquor purchases?
+
+- intent: travel/leave_and_travel
+  examples: |
+    - Is it possible for me to combine my travel with my leave selection?
+    - Can I combine my Travel and choose leaves?
+    - Can I opt for leaves by combining my Travel ?
+    - Can I combine my Travel with leaves?
+    - Can I combine my Travel and choose leaves?
+    - can I combine my Travel and opt for leaves?
+    - Can I combine my Travel with leaves?
+
+- intent: travel/submission_of_claim
+  examples: |
+    - What should I submit in my Claim ?
+    - What should I submit in my Claim ?
+    - What should I include in my Claim?
+    - What information should I include in my Claim?
+    - What specifics should I mention in my Claim?
+    - What details should I include in my Claim?
+    - What should I mention in my Claim?
+    - What information do I need to include in my Claim?
+    - What should my Claim contain?
+    - What details should my Claim contain?
+    - In my Claim, what should I include?
+    - What should I put in my Claim?
+    - In my Claim, what details should I include?
+
+- intent: travel/reimbursement_of_claim
+  examples: |
+    - When will I get my reimbursement upon submission of Claim?
+    - after how many days of claim i will get the reimbursement.
+    - when will i get expenses back which i have spent on tavelling for business?
+    - Can you claim reimbursed travel expenses?
+    - Can you claim reimbursement for travel expenses?
+    - Can you claim travel expenses?
+    - When will I get my refund for my claim?
+    - When will I receive my refund when I submit my claim?
+    - When will I receive my refund after submitting the claim?
+    - When I submit my claim, when will I receive my refund?
+    - When I submit my claim, how long would it take for me to receive my refund?
+    - When will I receive my compensation when I submit my Claim?
+    - When will I get reimbursed for the claim I submitted?
+    - When I file my claim, when will I receive my refund?
+    - When will I receive my refund after submitting my Claim?
+    - When will I receive my reimbursement after submitting my claim?
+    - When will I receive my refund after submitting a Claim?
+
+- intent: travel/travel_cancel
+  examples: |
+    - What should I do if my travel get cancelled ?
+    - what should i do after travel cancellation
+    - travel is cancelled. Now what should i do.
+    - my travel is cancelled
+
+- intent: travel/When_should_I_submit_my_Claims
+  examples: |
+    - When should I submit my Claims ?
+    - claim submit time
+    - at what time claims should be completed.
+    - when should i apply for claim
+
+- intent: travel/advance_amount
+  examples: |
+    - Will I get advance amount for my Travel?
+    - is my organization give before travelling.
+    - can i get travel amount before travelling.
+    - when travel amount is givenn to the employee.
+
+- intent: travel/Travel_Requisition
+  examples: |
+    - When should I submit my Travel Requisition?
+    - on what time travel requisition should be submitted?
+    - what will be the right time to submit travel requisition?
+    - when should I request for travel allowance?
+
+- intent: travel/bills_against_the_daily_allowance
+  examples: |
+    - Do I need to submit bills against the daily allowance?
+    - it is necessary to submit the bills of daily allowance..
+    - what to do with bills of daily allowance.
+    - is it needed for to submit the hotel bills 
+    - is it necessary to sub,it the prrof of spent money for daily allowance.
+    
+- intent: travel/daily_allowance_amount_me
+  examples: |
+    - What is the daily allowance amount for which I am entitle?
+    - What is the amount of daily allowance to which I am entitled?
+    - What is the amount of my daily allowance?
+    - What is the amount of the daily stipend to which I am entitled?
+
+- intent: travel/daily_allowance
+  examples: |
+    - What is mean by Daily Allowance?
+    - What exactly does "Daily Allowance" mean?
+    - What does it mean to have a daily allowance?
+    - What exactly does the term "daily allowance" mean?
+    - What exactly does the term "daily allowance" refer to?
+    - What does the term "daily allowance" mean?
+    - can you tell me about daily allowance?
+
+- intent: travel/amount_of_self_arranged_accomodation
+  examples: |
+    - Will I be entitle for any amount in case of Self-arranged accommodation?
+    - Will I be entitled to any compensation if I arrange my own lodging?
+    - In the case of self-arranged housing, am I entitled to any compensation?
+    - Will I be entitled to any compensation if I arrange my own accommodations?
+    - Will I be entitled to any compensation if I arrange my own lodging?
+    - In the case of self-arranged housing, am I entitled to any compensation?
+    
+- intent: travel/metro_cities
+  examples: |
+    - Which are Metro Cities as per Travel Policy ?
+    - Which are Metro Cities as per Travel Policy ?
+    - Which cities are considered metropolises under the Travel Policy?
+    - According to the Travel Policy, which cities are considered metro?
+    - According to the Travel Policy, which cities are metros?
+    - According to the Travel Policy, which cities are considered metros?
+    - For travel policy, metro cities are important.
+    - metro cities for travel policy
+    - which metro cities are comes into travel polocies.
+
+- intent: travel/non_metro_cities
+  examples: |
+    - Which are Non-Metro Cities as per Travel Policy ?
+    - According to the Travel Policy, which cities are considered non-metro?
+    - According to the Travel Policy, which cities are not metros?
+    - According to the Travel Policy, which cities are classified as non-metro?
+    - Which cities are classified as non-metropolitan by the Travel Policy?
+
+- intent: travel/monetary_limits_for_hotel
+  examples: |
+    - What is the monetary limits for Hotel accommodation or Lodging when i travel to client site?
+    - accomodation charges limit in metro or non metro city limits
+    - limit in accomodation charges for metro city limits
+    - lodging charges monetary limits
+    - statying charges limits
+    - When I travel to a client's location, what are the monetary limitations for hotel accommodations or lodging?
+    - What are the monetary limitations for hotel accommodations or lodging when I travel to the client's location?
+    - What are the monetary constraints for hotel accommodations?
+
+- intent: travel/search_for_stay
+  examples: |
+    - Do I have to search for Hotel Stay ?
+    - what if omfys booked us the hotel.
+    - do the omfys tie up with hotels?
+    - Do I need to look for a place to stay at a hotel?
+    - Is it necessary for me to look for a Hotel Stay?
+    - Do I need to look for a Hotel Stay?
+    - Do I need to look for a place to stay at a hotel?
+    - Is it necessary for me to look for a Hotel Stay?
+
+- intent: travel/not_stay_to_hotel
+  examples: |
+    - In Which I should not stay at Hotel during Travel to Client Site ?
+    - Which hotels should I avoid staying at when travelling to the client's site?
+    - what if client booked a hotel for stay?
+    - If client booked the accomodation at any location.
+    - Which hotels should I avoid staying at when travelling to the client's location?
+    - Which of the following situations should I avoid staying in a hotel when travelling to the client's location?
+
+- intent: travel/self_arranged_accomodation
+  examples: |
+    - What is mean by Self-arranged accommodation?
+    - What exactly does "self-arranged accomodation" mean?
+    - What exactly is self-arranged accommodation?
+    - tell me about self arranged accomodation.
+    - about self arranged accomodation
+    - what is self arranged accomodation?
+    - what is if money arraneged by me for accomodation?
+
+- intent: leave/CL_PL_LWP_leave
+  examples: |
+    - Who is eligible to take CL?
+    - Who is eligible to take PL?
+    - Who is eligible to take LWP?
+    - who can take Cl?
+    - who can take Pl?
+    - who can take LWP?
+    - eligibility of LWP.
+    - eligibility of CL.
+    - eligibility of PL.
+    - Who can take the CL?
+    - What is LWP?
+    - I don’t have leave balance; can I take leave (PL/CL)
+    - What is PL?
+    - What is CL?
+    - I am on probation period which leave I can take?
+    - How many days prior to apply for CL?
+    - How many days prior to apply for PL?
+    - Will my CL balance carry forward to next year?
+    - Will my PL balance carry forward to next year?
+    - What if my PL are balance at the end of the year?
+    - Which leaves are considered for encashment?
+    
+- intent: leave/leave_services_check
+  examples: |
+    - How can I check my leave eligibility?
+    - How can I apply for leave?
+    - Can I take leave by joining with week off?
+    - Can I take leave by joining with holiday?
+    - Can I apply for leave after consuming of leave?
+    - What if I cannot apply to leave as per policy?
+    - Will my leaves get carry forward to next year
+
+- intent: faq
+  examples: |
+    - faq
+    - FAQ
+    - Faq
+    
+
+

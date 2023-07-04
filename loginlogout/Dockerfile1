@@ -1,0 +1,29 @@
+FROM rasa/rasa:2.4.3-full
+#docker pull rasa/rasa:2.4.3-full
+
+WORKDIR /app
+
+# COPY actions/requirements.txt ./
+
+USER root
+
+#COPY ./actions /app/actions
+COPY . .
+
+#RUN rasa train
+RUN pip install gevent
+RUN pip install parsedatetime
+RUN pip install urlvalidator
+RUN pip install dateparser
+RUN pip install xlrd
+
+# RUN pip install -r requirements.txt
+
+#USER 1000
+
+#set entrypoint for intractive shell
+ENTRYPOINT ["rasa"]
+
+#command when container call to run
+CMD ["run","actions","-p","5008"]
+

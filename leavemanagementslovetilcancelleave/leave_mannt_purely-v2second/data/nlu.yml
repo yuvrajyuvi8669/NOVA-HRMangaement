@@ -1,0 +1,241 @@
+version: "2.0"
+nlu:
+
+# - intent: login_data
+#   examples: |
+#     - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+#     - employee code is [OMI-83](emp_code) and password is [Shdhf$765](password)
+#     - employee code is [OMI-83](emp_code) and password is [sfju$234](password)
+#     - employee code is [OMI-1083](emp_code) and password is [Rmdfr@435](password)
+#     - employee code is [OMI-0005](emp_code) and password is [Rmdfr@435](password)
+#     - emp code is [OMI-83](emp_code) and password is [Omfys@123](password)
+#     - emp code for you [OMI-83](emp_code)
+#     - code is [OMI-83](emp_code)
+#     - the employee code is [OMI-83](emp_code)
+#     - my employee code is [OMI-1036](emp_code)
+#     - the code is [OMI-1436](emp_code) and password is[Omfys@123](password)
+#     - [OMI-5546](emp_code) is my employee code and [Omfys@123](password) is my password
+#     - employee code is [OMI-1036](emp_code) and password is [Omfys@123](password)
+#     - employee code is [OMI-0001](emp_code) and password is [Omfys@123](password)
+#     - employee code is [OMI-0001](emp_code) and password and [Omfys@123](emp_code)
+
+- intent: login_data
+  examples: |
+    - employee code is OMI-83 and password is Rmdfr@435
+    - employee code is OMI-83 and password is Shdhf$765
+    - employee code is OMI-83 and password is sfju$234
+    - employee code is OMI-1083 and password is Rmdfr@435
+    - employee code is OMI-0005 and password is Rmdfr@435
+    - emp code is OMI-83 and password is Omfys@123
+    - emp code for you OMI-83
+    - code is OMI-83
+    - the employee code is OMI-83
+    - my employee code is OMI-1036
+    - the code is OMI-1436 and password is Omfys@123
+    - OMI-5546 is my employee code and Omfys@123 is my password
+    - employee code is OMI-1036 and password is Omfys@123
+    - employee code is OMI-0001 and password is Omfys@123
+    - employee code is OMI-0001 and password and Omfys@123
+
+
+- intent: affirm
+  examples: |
+    - yeah a cheap restaurant serving international food
+    - correct
+    - ye
+    - uh yes
+    - let's do it
+    - yeah
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that
+- intent: deny
+  examples: |
+    - no
+    - no new selection
+    - no thanks
+    - no thank you
+    - uh no
+    - breath no
+    - do you have something else
+    - no this does not work for me
+    - no indeed
+    - absolutely not
+    - most certainly not
+    - of course not
+    - under no circumstances
+    - by no means
+    - not at all
+    - negative
+    - never
+    - not really
+    - nae
+    - nope
+    - nah
+    - not on your life
+    - no way
+    - no fear
+    - not on your nelly
+    - no siree
+    - naw
+    - nay
+
+- intent: leav_apply
+  examples: |
+    - apply for leave
+    - leave apply
+    - okay apply a leave
+    - leav apply
+    - apply leaves please
+    - apply leaves
+    - i want to apply leave
+    - give mi apply leave  form
+    - apply leaves
+    - apply leave
+    - apply leave form
+    - leave apply form
+    - leave apply for mi
+    - apply leave for mi
+    - i would like to apply leave
+    - let me apply for leave
+    - its time for me to apply for leave
+    - applying for leave
+    - leave is something i need
+    - leave is needed for me
+    - 2022-07-14|2022-07-14|OD|demo|OMI-0086|demo|
+    - 2022-09-14|2022-09-14|PL|demo|OMI-0086|demo|
+    - 2022-03-14|2022-03-14|CL|demo|OMI-0086|demo|
+    - 2022-05-14|2022-05-14|LWP|demo|OMI-0086|demo|
+
+- intent: leav_bal
+  examples: |
+    - hey what about my leave balance?
+    - tell me my leave balance
+    - do you know my leave balance
+    - leave balance please?
+    - show me leave balance?
+    - show me my leave balance?
+    - tell me about how many leaves I got left?
+    - hmm okay what about leave balance
+    - hi what is my leave balance?
+    - provide me leave balance info please
+    - leave balance info please?
+    - leave balance do you know is how much?
+    - What about my leave balance you bot.
+    - leave balance
+    - leaves balance
+    - leaves's balance
+- intent: leav_eli
+  examples: |
+    - leave eligibility please?
+    - Can i get a leave?
+    - hey tell me leave eligibility?
+    - what is my leave eligibility bot?
+    - Am I eligible for leave application?
+    - tell me am i eligible for leave?
+    - leave eligibility status please?
+    - tell me leave eligibility ?
+    - do you know leave eligibility of mine?
+    - show me leave eligibility status?
+    - leave eligibility
+    - leaves eligibility
+    - leave's eligibility
+- intent: leav_status
+  examples: |
+    - what is my leave status?
+    - leave status please?
+    - is my leave approved?
+    - show me leave status
+    
+- intent: leaves
+  examples: |
+    - leaves?
+    - leaves section please?
+    - go to leaves section
+    - let's have leaves.
+    - leaves
+    - leaves please?
+    - leaves module please
+    - go to leaves
+    - Leaves please?
+    - leaves management
+    - leave management
+    - Leave management
+    - continue
+    - leave
+    - continue leaves
+    - continue leave
+- intent: Cancel_single_leave
+  examples: |
+    - cancel my  leave
+    - cancel my leaves
+    - cancel my leave
+    - cancel my leaves
+    - I want to cancel my applied leave
+    - cancel leave
+    - cancel leaves
+    - cancel my leave please
+    - leave cancel
+    - Abort my leave application
+    - cancel my leave please application
+    - leave cancel 
+    - cancel leave application
+    - cancel my leave request
+    - Cancel my all pending approvals
+    - Show me my pending approvals
+    - Cancel leave
+- intent: cancel_with_lr_id
+  examples: |
+    - cancel leave [24567](cancel_lr_id)
+    - cancel leave with [24567](cancel_lr_id)
+    - cancel [24567](cancel_lr_id)
+    - cancel [24567](cancel_lr_id) leave
+    - i want to cancel my leave with [24567](cancel_lr_id)
+    - please cancel my leave with lr id [24567](cancel_lr_id)
+    - [24567](cancel_lr_id)
+    - [24568](cancel_lr_id)
+    - [2456](cancel_lr_id)
+    - [24507](cancel_lr_id)
+    - [24547](cancel_lr_id)
+    - cancel leave for [32662](cancel_lr_id)
+    - [32622](cancel_lr_id)
+
+- intent: cancel_leave_by_month_date
+  examples: |
+    - cancel my leave request of [august](daterange)
+    - cancel my leave request from [22/2/2020](date) to [23/2/2020](daterange)
+    - cancel my leave request of [22/02/2020](daterange)
+    - cancel my leave request from [22nd august](date) to [25th august](daterange).
+    - I want to cancel my leaves of [august](daterange)
+    - I want to cancel my [August](daterange)’s leaves
+    - I want to cancel my applied leave from [22/02/2020](daterange) to [23/02/2020](daterange)
+    - I want to cancel my applied leave from [23rd jan](daterange) to [25th jan](daterange).
+    - Cancel my pending approvals of month [june](daterange)
+    - Cancel my pending approval from [31st june](daterange) to [2nd july](daterange)
+    - Cancel my pending approvals from [22/02/2020](daterange) to [23/02/2020](daterange)
+
+- intent: main_menu
+  examples: |
+    - home
+    - go to main menu
+    - show me main menu
+    - Home
+    - main menu
+    - Main menu
+    - #
+    - #main
+    - Main Menu
+    - hm
+    - Nova main menu
+    - services provided by nova
+    - Nova services
+    - nova services
+    - services by nova

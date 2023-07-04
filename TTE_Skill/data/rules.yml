@@ -1,0 +1,17 @@
+version: "2.0"
+rules:
+
+# - rule: request for task to pm
+#   condition:
+#   - active_loop: add_tte_form  
+#   steps:
+#   - intent: request_for_task
+#   - action: add_tte_form  
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: request_for_task_form
+#   - active_loop: request_for_task_form
+#   - active_loop: null
+#   - action: request_for_task_form_submit
+#   - action: utter_newTTE_sameproject

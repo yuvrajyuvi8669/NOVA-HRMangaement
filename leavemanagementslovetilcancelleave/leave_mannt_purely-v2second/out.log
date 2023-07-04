@@ -1,0 +1,450 @@
+2022-04-08 15:29:01,346 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-08 15:29:01,365 [INFO ]  Loading model models\20220408-125737.tar.gz...
+2022-04-08 15:29:03,817 [INFO ]  Loading model models\20220408-125737.tar.gz...
+2022-04-08 15:29:37,428 [INFO ]  Rasa server is up and running.
+2022-04-08 15:30:52,947 [ERROR]  Encountered an exception while running action 'action_apply_leave_api'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-08 15:50:07,168 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-08 15:50:07,184 [INFO ]  Loading model models\20220408-125737.tar.gz...
+2022-04-08 15:50:10,072 [INFO ]  Loading model models\20220408-125737.tar.gz...
+2022-04-08 15:50:57,737 [INFO ]  Rasa server is up and running.
+2022-04-08 16:13:08,590 [ERROR]  Encountered an exception while running action 'action_check_logged_for_leaves_service'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 504, in _request
+    await resp.start(conn)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client_reqrep.py", line 860, in start
+    self._continue = None
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\helpers.py", line 596, in __exit__
+    raise asyncio.TimeoutError from None
+concurrent.futures._base.TimeoutError
+2022-04-08 16:16:40,064 [ERROR]  Encountered an exception while running action 'action_apply_leave_api'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-08 16:19:16,302 [ERROR]  Encountered an exception while running action 'action_apply_leave_api'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-08 16:25:55,123 [ERROR]  Encountered an exception while running action 'action_apply_leave_api'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-08 16:37:26,556 [ERROR]  Encountered an exception while running action 'action_check_logged_for_leaves_service'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 504, in _request
+    await resp.start(conn)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client_reqrep.py", line 847, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\streams.py", line 591, in read
+    await self._waiter
+concurrent.futures._base.CancelledError
+2022-04-08 16:38:55,170 [ERROR]  Encountered an exception while running action 'action_apply_leave_api'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-08 17:54:08,096 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-08 17:54:08,122 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-08 17:54:11,343 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-08 17:55:10,178 [INFO ]  Rasa server is up and running.
+2022-04-08 18:24:47,595 [ERROR]  Encountered an exception while running action 'action_get_leave_balance'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 504, in _request
+    await resp.start(conn)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client_reqrep.py", line 860, in start
+    self._continue = None
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\helpers.py", line 596, in __exit__
+    raise asyncio.TimeoutError from None
+concurrent.futures._base.TimeoutError
+2022-04-08 18:31:24,364 [ERROR]  Encountered an exception while running action 'action_check_logged_for_main_menu'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 504, in _request
+    await resp.start(conn)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client_reqrep.py", line 847, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\streams.py", line 591, in read
+    await self._waiter
+concurrent.futures._base.CancelledError
+2022-04-09 10:30:42,789 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-09 10:30:42,799 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 10:30:46,166 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 10:31:21,099 [INFO ]  Rasa server is up and running.
+2022-04-09 10:32:04,244 [ERROR]  Encountered an exception while running action 'action_check_logged_for_main_menu'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 949, in create_connection
+    await self.sock_connect(sock, address)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\selector_events.py", line 473, in sock_connect
+    return await fut
+concurrent.futures._base.CancelledError
+2022-04-09 11:10:23,393 [ERROR]  Encountered an exception while running action 'action_set_login_slots'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-09 11:10:56,745 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-09 11:10:56,745 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 11:10:59,541 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 11:11:34,011 [INFO ]  Rasa server is up and running.
+2022-04-09 11:19:54,286 [ERROR]  Failed to run custom action 'action_check_logged_for_main_menu'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+2022-04-09 11:19:54,305 [ERROR]  Encountered an exception while running action 'action_check_logged_for_main_menu'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 962, in create_connection
+    raise exceptions[0]
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 949, in create_connection
+    await self.sock_connect(sock, address)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\selector_events.py", line 473, in sock_connect
+    return await fut
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\selector_events.py", line 503, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 10061] Connect call failed ('127.0.0.1', 5055)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 706, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-09 11:20:13,070 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-09 11:20:13,086 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 11:20:15,234 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 11:20:48,093 [INFO ]  Rasa server is up and running.
+2022-04-09 13:50:29,145 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-09 13:50:29,161 [INFO ]  Loading model models\20220409-121011.tar.gz...
+2022-04-09 13:50:31,389 [INFO ]  Loading model models\20220409-121011.tar.gz...
+2022-04-09 13:51:13,164 [INFO ]  Rasa server is up and running.
+2022-04-09 14:14:25,838 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-09 14:14:25,860 [INFO ]  Loading model models\20220409-135815.tar.gz...
+2022-04-09 14:14:28,709 [INFO ]  Loading model models\20220409-135815.tar.gz...
+2022-04-09 14:15:03,189 [INFO ]  Rasa server is up and running.
+2022-04-09 14:15:22,372 [ERROR]  Encountered an exception while running action 'action_set_login_slots'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-09 14:16:12,180 [ERROR]  Encountered an exception while running action 'action_set_login_slots'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-09 14:17:55,647 [ERROR]  Failed to run custom action 'action_check_logged_for_main_menu'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+2022-04-09 14:19:45,779 [ERROR]  Encountered an exception while running action 'action_check_logged_for_main_menu'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 962, in create_connection
+    raise exceptions[0]
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 949, in create_connection
+    await self.sock_connect(sock, address)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\selector_events.py", line 473, in sock_connect
+    return await fut
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\selector_events.py", line 503, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 10061] Connect call failed ('127.0.0.1', 5055)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 706, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-09 14:19:46,390 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\sanic\app.py", line 1129, in run
+    serve(**server_settings)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\sanic\server.py", line 935, in serve
+    loop.run_until_complete(asyncio.sleep(0.1))
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 574, in run_until_complete
+    self.run_forever()
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 541, in run_forever
+    self._run_once()
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 1750, in _run_once
+    event_list = self._selector.select(timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\sanic\compat.py", line 48, in ctrlc_handler
+    raise KeyboardInterrupt("Non-graceful Ctrl+C")
+KeyboardInterrupt: Non-graceful Ctrl+C
+2022-04-09 14:30:51,539 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-09 14:30:51,555 [INFO ]  Loading model models\20220409-143023.tar.gz...
+2022-04-09 14:31:05,624 [INFO ]  Loading model models\20220409-143023.tar.gz...
+2022-04-09 14:31:38,548 [INFO ]  Rasa server is up and running.
+2022-04-09 14:32:43,180 [ERROR]  Failed to run custom action 'action_check_login_status'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+2022-04-09 14:32:43,184 [ERROR]  Encountered an exception while running action 'action_check_login_status'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 936, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore  # noqa
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 962, in create_connection
+    raise exceptions[0]
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\base_events.py", line 949, in create_connection
+    await self.sock_connect(sock, address)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\selector_events.py", line 473, in sock_connect
+    return await fut
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\asyncio\selector_events.py", line 503, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 10061] Connect call failed ('127.0.0.1', 5055)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 151, in request
+    **kwargs,
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 1012, in __aenter__
+    self._resp = await self._coro
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\client.py", line 483, in _request
+    timeout=real_timeout
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 523, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 859, in _create_connection
+    req, traces, timeout)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 1004, in _create_direct_connection
+    raise last_exc
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 986, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\aiohttp\connector.py", line 943, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host localhost:5055 ssl:default [Connect call failed ('127.0.0.1', 5055)]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 706, in run
+    raise RasaException("Failed to execute custom action.")
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-09 14:33:15,417 [ERROR]  Encountered an exception while running action 'action_set_login_slots'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.
+2022-04-09 14:35:59,726 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-04-09 14:35:59,747 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 14:36:17,180 [INFO ]  Loading model models\20220408-175218.tar.gz...
+2022-04-09 14:37:53,240 [INFO ]  Rasa server is up and running.
+2022-04-09 14:38:08,870 [ERROR]  Encountered an exception while running action 'action_set_login_slots'.Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 675, in run
+    json=json_body, method="post", timeout=DEFAULT_REQUEST_TIMEOUT
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\utils\endpoints.py", line 155, in request
+    response.status, response.reason, await response.content.read()
+rasa.utils.endpoints.ClientResponseError: 500, Internal Server Error, body='b'<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</title>\n<style>\n        html { font-family: sans-serif }\n        h2 { color: #888; }\n        .tb-wrapper p { margin: 0 }\n        .frame-border { margin: 1rem }\n        .frame-line > * { padding: 0.3rem 0.6rem }\n        .frame-line { margin-bottom: 0.3rem }\n        .frame-code { font-size: 16px; padding-left: 4ch }\n        .tb-wrapper { border: 1px solid #eee }\n        .tb-header { background: #eee; padding: 0.3rem; font-weight: bold }\n        .frame-descriptor { background: #e2eafb; font-size: 14px }\n    </style>\n<h1>\xe2\x9a\xa0\xef\xb8\x8f 500 \xe2\x80\x94 Internal Server Error</h1><p>The server encountered an internal error and cannot complete your request.\n''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\processor.py", line 766, in _run_action
+    output_channel, nlg, temporary_tracker, self.domain
+  File "c:\users\yuvraj.yamgar\appdata\local\programs\python\python37\lib\site-packages\rasa\core\actions\action.py", line 698, in run
+    raise RasaException("Failed to execute custom action.") from e
+rasa.shared.exceptions.RasaException: Failed to execute custom action.

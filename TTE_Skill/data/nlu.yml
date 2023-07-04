@@ -1,0 +1,477 @@
+version: "2.0"
+nlu:
+
+- intent: user_login
+  examples: |
+    - login
+    - SignIn
+    - login please
+    - hey help me with login
+    - i need to login
+    - sign up
+    - i want to login with my account
+    - log up
+    - log in
+    - Your HR Digital Assitant. Could you please log in for my help?"
+
+- intent: logout
+  examples: |
+    - logout please
+    - logout
+    - out
+    - exit
+    - get out
+    - get me out
+    - go away
+    - Exit
+    - i want to exit
+    - please logout me
+    - please exit it
+
+- intent: greet
+  examples: |
+    - Hello
+    - hello
+    - hey
+    - hi
+    - heya
+    - howdy
+    - hey there
+    - Hi
+    - h
+    - heyeeeeeeeee
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - bye bye
+    - see ya
+    - see you later
+
+- intent: thanks
+  examples: |
+    - okay thanks
+    - that you so much
+    - thanks for your time really
+
+- intent: tte_mgmt
+  examples: |
+    - projects information please?
+    - project module please
+    - go to projects
+    - projects please?
+    - i want to visit project mangement menu
+    - i want to avail project mansgement service
+    - I am interested in project management services
+    - I am looking for project management services
+    - My company needs project management services
+    - If you are interested in project management services, please contact me
+    - Project management services are of interest to me
+    - Project management service is what I want
+    - Provide me with project management services
+    - A project management service would be most useful to me
+    - The service I need is project management
+
+- intent: login_data
+  examples: |
+    - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+    - emp code is OMI-83 [OMI-83](emp_code)
+    - emp code for you OMI-83 [OMI-83](emp_code)
+    - code is OMI-83 [OMI-83](emp_code)
+    - the employee code is OMI-83 [OMI-83](emp_code)
+    - my employee code is OMI-1036 [OMI-1036](emp_code)
+    - hmm the code is OMI-1436 [OMI-1436](emp_code)
+    - OMI-5546 is my employee code [OMI-5546](emp_code)
+
+# - intent: empID
+#   examples: |
+#     - tell me employee id
+#     - do you know emp id?
+#     - empid
+#     - EMPID
+#     - EmpId
+#     - my employee code
+
+- intent: affirm
+  examples: |
+    - yeah
+    - correct
+    - ye
+    - uh yes
+    - let's do it
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that
+    - yeeessssss
+    - you got it
+    - it's correct
+    - go ahead please
+
+- intent: deny
+  examples: |
+    - no
+    - no new selection
+    - no thanks
+    - no thank you
+    - uh no
+    - breath no
+    - do you have something else
+    - no this does not work for me
+    - no indeed
+    - absolutely not
+    - most certainly not
+    - of course not
+    - under no circumstances
+    - by no means
+    - not at all
+    - negative
+    - never
+    - not really
+    - nae
+    - nope
+    - nah
+    - not on your life
+    - no way
+    - no fear
+    - not on your nelly
+    - no siree
+    - naw
+    - nay
+    - something is missing
+    - few are wrong
+
+# - intent: Projects_management
+#   examples: |
+#     - I was assigned a project.
+#     - A project has been assigned to me.
+#     - I have been assigned the project.
+#     - I am working on an assigned project.
+#     - It is my responsibility to complete the project.
+#     - To me has been assigned a project.
+#     - This is a project I was assigned.
+#     - A project was assigned to me.
+#     - This is my project.
+#     - Assigned to me a project.
+#     - Projects
+#     - project related information
+#     - go to project section
+#     - let's have projects.
+#     - projects
+#     - projects information please?
+#     - project module please
+#     - go to projects
+#     - projects please?
+#     - continue
+#     - project
+#     - continue project
+#     - continue projects
+#     - i want see project for me.
+#     - projet assigned to me.
+#     - projects under me.
+#     - projects for me.
+#     - project management
+#     - go to project management
+#     - project mgmt
+#     - show me options in project management
+#     - Projects management
+#     - Project Mgmt.
+#     - project mgmt.
+
+
+
+- intent: main_menu
+  examples: |
+    - home
+    - go to main menu
+    - show me main menu
+    - Home
+    - main menu
+    - Main menu
+    - #
+    - #main
+    - Main Menu
+    - hm
+    - Nova main menu
+    - services provided by nova
+    - Nova services
+    - nova services
+    - services by nova
+
+- intent: same_project
+  examples: |
+    - same project
+    - add tte for same project
+    - i want to add tte for same project
+    - go with same project
+    - list of main task
+    - display main task list fo adding tte
+    - show me maintasks under this project
+    - maintask please
+    - list out maintask under the same project
+    - Please provide me the same project.
+    - similar project, please
+    - take on the same assignment as you
+    - take me on the same project
+    - choose the same project option
+    - choose option "same project"
+    - show the main task list for the same project
+    - show the same project's maintask list
+    - provide a list of the same project's major tasks
+    - show me the project's major tasks
+    - show me the major project tasks
+    - Please show me the major tasks of the same project.
+
+- intent: other_project
+  examples: |
+    - transport me to a different project
+    - other project
+    - bring me to a different project
+    - send me to a different project
+    - transfer me to another project
+    - move me to another project
+    - please transfer me to another project
+    - take me to other project
+    - project list that has been assigned
+    - project list that has been allocated
+    - list of projects assigned
+    - list of assigned projects
+    - add tte for other project
+    - i want to add tte for other project
+    - go with other project
+    - list of projects
+    - display project list fo adding tte
+    - show me list of projects under me
+    - my assigned project list
+    - display all projects assigned to me
+
+- intent: back_to_previous_menu
+  examples: |
+    - i want to go back
+    - back
+    - go back to previous menu
+    - previous menu
+    - Back
+    - go back
+    - back to project module menu
+    - take me to project module
+    - show me project module details
+    - <
+    - <<
+
+- intent: tte_data
+  examples: |
+    - desiging|2:30|4:30|In Progress|comment|
+    - developement|2:30|4:30|Hold|comment|
+    - testing|5:30|4:30|Completed|comment|
+    - testing|2:30|4:30|In Progress|comment|
+
+- intent: tte_details
+  examples: |
+    - Add TTE
+    - Take me to the task and time entry module
+    - take me to TTE module
+    - open TTE skill in NOVA
+    - I want to add TTE
+    - i want to task time entry
+    - tasksheet time entry
+    - i want task and time entry
+    - Please open TTE module
+    - Open task and time entry module
+    - i want add activity [testing](activity_name) in task worked on it from [11.00AM]{"entity": "time", "role": "start_time"} to [1:00PM]{"entity": "time", "role": "end_time"}
+    - i want add activity [document creation](activity_name) in task worked on it from [11.00AM]{"entity": "time", "role": "start_time"}  to [1:00PM]{"entity": "time", "role": "end_time"}
+    - i want add activity [flow designing](activity_name) in task worked on it from [11.00AM]{"entity": "time", "role": "start_time"} to [1:00PM]{"entity": "time", "role": "end_time"}
+    - i have [completed](task_status) task with last [activity](activty_name) of [addtion of data](activity_name) started at [10.00AM]{"entity": "time", "role": "start_time"} and ended at [3.00PM]{"entity": "time", "role": "end_time"}
+    - I would want to add to the assignment [demonstarion of multiple response](activity_name) from [11 am]{"entity": "time", "role": "start_time"}  to [1 pm]{"entity": "time", "role": "end_time"}
+    - i want to add activity [rnD on given concept](activity_name)
+    - I like to include some activity [training module](activity_name)
+    - I want to include some type of activity [integration og skill](activity_name)
+    - I want to include an activity [docker deployment](activity_name)
+    - add activity [learning of node js concept](activity_name) in task
+    - add activity [filling details of tte](activity_name) in task
+    - add activity [reading book in task](activity_name) in task
+    - add activity [going for walk](activity_name) in task
+    - add activity [doing exercise](activity_name) in task
+    - add activity [drink coffee](activity_name) in task
+    - add an activity [meeting with client](activity_name) to the task.
+    - activity [demonstration of flow](activity_name)
+    - start time [1.00 pM]{"entity": "time", "role": "start_time"}
+    - end time [4:00 PM]{"entity": "time", "role": "end_time"}
+    - task status [hold](task_status)
+    - task status [In Progress](task_status)
+    - comment [demo](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from [9.30 am]{"entity": "time", "role": "start_time"} to [1.30 pm]{"entity": "time", "role": "end_time"} status [In Progress](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from  [9.30 am]{"entity": "time", "role": "start_time"} to [1.30 pm]{"entity": "time", "role": "end_time"} status [In Progress](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - hey!NOVA add activity [RND on composite bags](activity_name) with status [InProgress](task_status) from [9.30 am](start_time) to [1.30 pm]{"entity": "time", "role": "end_time"}
+    - activity [RnD of BOW concept in RASA](activity_name) from [9.30 am](start_time) to [1.30 pm]{"entity": "time", "role": "end_time"} status [In Process](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from [9.30 am]{"entity": "time", "role": "start_time"} to [1.30 pm] {"entity" : "time", "role":"end_time","value":"1.30 pm"} status [In Progress](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from [9.30 am]{"entity": "time", "role": "start_time"} to [1.30 pm]{"entity": "time", "role": "end_time"} status [Completed](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from [9.30 am]{"entity": "time", "role": "start_time"}to [1.30 pm]{"entity": "time", "role": "end_time"} status [Hold](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [Multiple entity from single sentence](activity_name) from [9.30 am]{"entity": "time", "role": "start_time"} to [1.30 pm]{"entity": "time", "role": "end_time"} status [Hold](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [extract multiple entities to fill data](activity_name) from [2.30 pm]{"entity": "time", "role": "start_time"} to [6.30 pm]{"entity": "time", "role": "end_time"} status [In Progress](task_status) comment [working on Demo in rasa](comment)
+    - activity RnD of BOW concept in RASA from 9.30 am to 1.30 pm status In Progress comment Got brief idea about composite bag type in rasa
+    - activity [RnD of BOW concept in RASA](activity_name) from [10 am]{"entity": "time", "role": "start_time"} to [2 pm]{"entity": "time", "role": "end_time"} status [In Progress](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from [9 am]{"entity": "time", "role": "start_time"} to [6 pm]{"entity": "time", "role": "end_time"} status [In Progress](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from [7 am]{"entity": "time", "role": "start_time"} to [8 pm]{"entity": "time", "role": "end_time"} status [In Progress](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - activity [RnD of BOW concept in RASA](activity_name) from [11 am]{"entity": "time", "role": "start_time"} to [4 pm]{"entity": "time", "role": "end_time"} status [In Progress](task_status) comment[ Got brief idea about composite bag type in rasa]{"entity": "comment", "value": "Got brief idea about composite bag type in rasa"}
+    - activity [extract multiple entities to fill data](activity_name) from [2.30 pm](start_time) to [6.30 pm] {"entity" : "time", "role":"end_time","value":"6.30 pm"} status [In Progress](task_status) comment [working on Demo in rasa](comment)
+    - activity [Testing flow fully text chat] (activity_name) from [10.30 am]{"entity": "time", "role": "start_time"} to [6.30 pm]{"entity": "time", "role": "end_time"}status [Completed](task_status) comment [testing flow via training](comment)
+    - activity [extract multiple entities to fill data](activity_name) from [2.30 pm]{"entity": "time", "role": "start_time"} to [6.30 pm]{"entity": "time", "role": "end_time"}status [In Progress](task_status) comment [working on Demo in rasa](comment)
+    - add TTE for project [besta digital assistant in NOVA](project_name) maintask [project management skill in nova](main_task_name) subtask [tte skill in nova](sub_task_name) subsubtask [tte skill implementation for 100% voice chat](sub_sub_task_name)
+    - project [besta digital assistant in NOVA](project_name)
+    - project [ALAN DA](project_name)
+    - maintask [HR DA skill development in NOVA](main_task_name)
+    - subsubtask [tte skill implementation for 100% text](sub_sub_task_name)
+    - maintask [project management skill in nova](main_task_name)
+    - subtask [tte skill in nova](sub_task_name)
+    - subtask [tte skill in nova] (sub_task_name)
+    - subsubtask [tte skill implementation for 100% voice chat](sub_sub_task_name)
+    - add TTE for subsubtask [tte skill implementation for 100% voice chat](sub_sub_task_name)
+    - subsubtask [tte skill implementation for 100% voice chat] (sub_sub_task_name)
+    - i want to add task and time entry under project [besta digital assistant in NOVA](project_name) maintask [project management skill in nova](main_task_name) subtask [tte skill in nova](sub_task_name) subsubtask [tte skill implementation for 100% voice chat](sub_sub_task_name) activity [RnD of BOW concept in RASA](activity_name) from [9.30 am](start_time) to [1.30 pm](end_time) status [In Progress](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - please add TTE under the project [besta digital assistant in NOVA](project_name) maintask [project management skill in nova](main_task_name) subtask [tte skill in nova](sub_task_name) sub sub task [tte skill implementation for 100% voice chat](sub_sub_task_name) activity [Multiple entity from single sentence](activity_name) from [9.30 am]{"entity": "time", "role": "start_time"} to [1.30 pm]{"entity": "time", "role": "end_time"} status [Hold](task_status) comment [Got brief idea about composite bag type in rasa](comment)
+    - want to add task and time entry under project [besta digital assistant in NOVA maintask](project_name)[besta digital assistant in NOVA](project_name) [maintask project](main_task_name)[project management skill in nova activity](project_name)[project management skill in nova](main_task_name) [activity testing flow from](activity_name)[testing](comment) [flow](activity_name) [from 9.30 am ](start_time)[9.30 am]{"entity": "time", "role": "start_time"} [to 6.30 pm ](end_time)[6.30 pm]{"entity": "time", "role": "end_time"} with status [In Progress](task_status)[In Progress](task_status)
+    - want to add task and time entry under project [besta digital assistant in NOVA maintask](project_name)[besta digital assistant in NOVA](project_name) [maintask project](main_task_name)[project management skill in nova activity](project_name)[project management skill in nova](main_task_name) [activity testing flow from](activity_name)[testing](activity_name) [flow](activity_name) [from 9 am ](start_time)[9](sub_sub_task_name) [am]{"entity": "time", "role": "start_time"} [to 6 pm ](end_time)[6 pm]{"entity": "sub_sub_task_name", "role": "end_time"} with status [In Progres](task_status)
+    - want to add task and time entry under project [besta digital assistant in NOVA](project_name) maintask [project management skill in nova](main_task_name) activity [testing flow](activity_name) [from 9 am ](start_time)from [9 am ]{"entity": "time", "role": "start_time", "value": "9 am"} to [6 pm]{"entity": "time", "role": "end_time"} with status [In Progress](task_status)[In Progress](task_status)
+    - want to add task and time entry under project [besta digital assistant in NOVA](project_name) maintask [Marketing Digital Assistant activity](main_task_name) [testing flow](activity_name)from [9 am] {"entity": "time", "role": "start_time", "value": "9 am"} to [6 pm] {"entity": "time", "role": "end_time", "value": "6 pm"} with status [In Progres](task_status)
+
+- intent: request_for_task
+  examples: |
+    - request for task
+    - i want to notify my project manager fpr addition of tasks
+    - i am not getting tasks related to me
+    - its not my tasks
+    - please add task here for me
+    - i want to add task request to my project manager
+    - request for new task
+    - send mail to project manager related new task
+    - help me to notify project manager to assign new task
+    - i can't find task , can you please help me?
+    - take me to the project manager , i want to request him for new task.
+    - ask for new task
+    - suggest project manager for new task
+    - a new task request
+    - a new job is requested
+    - fresh task request
+    - send a new task notification email to the project manager
+    - send an email to the project manager informing him or her of the new task or job
+    - Project manager will be notified of the new assignment.
+    - Project manager should be notified of the new assignment.
+    - a request for a new task to the project manager
+    - submitting a new task request to the project manager
+    - request for a new assignment to the project manager
+    - Because there are no tasks available, I'd want to make a request to the project manager for a new task.
+    - I'd want to request a new task from the project manager because the tasks I have aren't available.
+    - job is not available, inform the project manager and request a new assignment.
+    - task is not available, tell the project manager so that a new task may be created.
+    - tasks are not accessible or available, send a notice email to the project manager.
+    - tasks aren't accessible or available, send an email to the project manager informing him or her of the new task.
+
+- intent: Close_TTE_form
+  examples: |
+    - stop the form
+    - close the form
+    - close TTE details form
+    - ###
+    - close
+    - get me out from this flow
+    - Close the form
+    - submit without details
+    - close it
+    - shut it down
+
+- synonym: Got brief idea about composite bag type in rasa
+  examples: |
+    - Got brief idea about composite bag type in rasa
+    - Got brief idea about composite bag type in rasa
+
+- synonym: 9 am
+  examples: |
+    - 9 am
+
+- synonym: In Progress
+  examples: |
+    - In progress
+    - inprogress
+    - InProgress
+    - Inprogrss
+    - progress
+    - working
+    - resumed
+    - In progres
+    - status in progress
+    - In Progres
+
+- synonym: Completed
+  examples: |
+    - completed
+    - finished
+    - done with
+
+- synonym: Hold
+  examples: |
+    - stopped working
+    - hold
+    - paused
+    - pause
+
+- regex: activity_name
+  examples: |
+    - \bactivity[\s\w]+?(project|from|since|start time|end time|tiil|upto|ended at|since|started at|with status|task status|status|maintask|main task|subtask|sub task|sub sub tak|subsubtask|sub subtask)\b
+
+- regex: emp_code
+  examples: |
+    - ^(OMI-)[0-9]{4}
+
+- regex: end_time
+  examples: |
+    - \b(till|to|end time|ended at|endtime|upto|finished at|completed at)\s\d{1,2}[.:]{0,1}\d{0,2}\s{0,1}[am,pm,PM,AM,Pm,Am]{2}\s\b
+
+- regex: main_task_name
+  examples: |
+    - \bmain task[\s\w]+?(from|since|start time|end time|with status|task status|status|activity|project|under the project|subtask|sub task|sub sub tak|subsubtask|sub subtask)\b
+    - \bmaintask[\s\w]+?(from|since|start time|end time|with status|task status|status|activity|project|under the project|subtask|sub task|sub sub tak|subsubtask|sub subtask)\b
+
+# - regex: password
+#   examples: |
+#     - [A-Za-z@#$!*1-9]*
+
+- regex: project_name
+  examples: |
+    - \bproject[\s\w]+?(from|since|start time|end time|tiil|upto|ended at|since|started at|with status|task status|status|activity|maintask|main task|subtask|sub task|sub sub tak|subsubtask|sub subtask)\b
+
+- regex: start_time
+  examples: |
+    - \b(since|from|start time|started at|starttime)\s\d{1,2}[.:]{0,1}\d{0,2}\s{0,1}[am,pm,PM,AM,Pm,Am]{2}\s\b
+
+- regex: sub_sub_task_name
+  examples: |
+    - \bsub sub task[\s\w]+?(from|since|start time|end time|with status|task status|status|activity|project|under|maintask|main task)\b
+    - \bsub subtask[\s\w]+?(from|since|start time|end time|with status|task status|status|activity|project|under|maintask|main task)\b
+    - \bsubsubtask[\s\w]+?(from|since|start time|end time|with status|task status|status|activity|project|under|maintask|main task)\b
+
+- regex: sub_task_name
+  examples: |
+    - \bsub task[\s\w]+?(from|since|start time|end time|with status|task status|status|activity|project|under|maintask|main task|sub sub task|subsubtask|sub subtask)\b
+    - \bsubtask[\s\w]+?(from|since|start time|end time|with status|task status|status|activity|project|under|maintask|main task|sub sub task|subsubtask|sub subtask)\b
+
+- regex: task_status
+  examples: |
+    - \bCompleted\b
+    - \bHold\b
+    - \bIn Progress\b
+    - \bstatus\s(In Progress|Hold|Completed)\s\b
+
+- regex: tte_data
+  examples: |
+    - ^/w|/w|/w|/w|

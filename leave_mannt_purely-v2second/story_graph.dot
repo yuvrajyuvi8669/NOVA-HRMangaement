@@ -1,0 +1,28 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label=action_set_login_slots];
+3 [class=active, fontsize=12, label=action_check_login_status];
+4 [class=active, fontsize=12, label=action_apply_leave_fill_details];
+5 [class=active, fontsize=12, label=apply_leave_form];
+7 [class=active, fontsize=12, label=action_apply_leave_form_submit];
+8 [class=active, fontsize=12, label=action_apply_leave_api];
+9 [class="dashed active", fontsize=12, label=action_default_fallback];
+10 [class="intent active", fillcolor=lightblue, label="employee code is OMI-0086 and password is Omfys@123", shape=rect, style=filled];
+11 [class="intent active", fillcolor=lightblue, label="leave apply", shape=rect, style=filled];
+12 [class="intent active", fillcolor=lightblue, label="start_date:12/04/2022,end_date:12/04/2022,purpose: Demo, hand_over_Employee: NA,knowledge_summary: NA", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 10  [class=active, key=0];
+2 -> 11  [class=active, key=0];
+3 -> 4  [class=active, key=NONE, label=""];
+4 -> 5  [class=active, key=NONE, label=""];
+5 -> 7  [class=active, key=NONE, label=""];
+5 -> 12  [class=active, key=0];
+7 -> 8  [class=active, key=NONE, label=""];
+8 -> 9  [class=active, key=NONE, label=""];
+10 -> 2  [class=active, key=0];
+11 -> 3  [class=active, key=0];
+12 -> 5  [class=active, key=0];
+}

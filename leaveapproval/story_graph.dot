@@ -1,0 +1,24 @@
+digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+3 [class=active, fontsize=12, label=action_set_login_slots];
+4 [class=active, fontsize=12, label=action_check_login_status];
+5 [class=active, fontsize=12, label=single_approval_name_form];
+6 [class=active, fontsize=12, label=action_single_approval_name_form_submit];
+7 [class=active, fontsize=12, label=action_get_one_pending_approval_by_name];
+8 [class="intent dashed active", label="  ?  ", shape=rect];
+9 [class="intent active", fillcolor=lightblue, label="employee code is OMI-0001 and password and Omfys@123", shape=rect, style=filled];
+10 [class="intent active", fillcolor=lightblue, label="show me pending leaves of priti", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 1  [class=active, key=NONE, label=""];
+1 -> 9  [class=active, key=0];
+3 -> 10  [class=active, key=0];
+4 -> 5  [class=active, key=NONE, label=""];
+5 -> 6  [class=active, key=NONE, label=""];
+6 -> 7  [class=active, key=NONE, label=""];
+7 -> 8  [class=active, key=NONE, label=""];
+9 -> 3  [class=active, key=0];
+10 -> 4  [class=active, key=0];
+}

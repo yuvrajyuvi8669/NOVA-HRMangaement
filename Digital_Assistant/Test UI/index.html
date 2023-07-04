@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>omfys-nova bot</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="static/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        var n = Math.floor(Math.random() * 1000000000);
+        window.localStorage.setItem("username", n);
+    </script>
+</head>
+
+<body style="background-image:url('./static/css/loginbg.jpg');" onload="send('Hi')">
+    <div class="container">
+        <div class="widget" id="widget" style="background-image: url('./static/img/sss.jpg');">
+            <div class="chat_header " >
+                <!--Add the name of the bot here -->
+                <div style="float: left;">
+                    <span style="color:white;margin-left: 95px; margin-right: -45px; margin-top: 10px;">
+                    <img class="omfysLogo" src="./static/img/novaavatar2.png"></img>
+                    </span>
+                </div>
+                
+                
+                  
+                
+               <div style="float: left; margin-top: 12px;" >
+                <div style="font-size: 18px; display: block; margin-top: -5px; margin-left: 15px;"> 
+                    <name style="color: white; margin-bottom: 0; margin-left: -15px; ">NOVA</name>
+                </div>
+                <div style="color: white; font-size: 12px; margin-top: -10px; display: block; ">
+                    <span><b>Omfys Digital Assistant</b></span>
+                </div>
+                
+               </div>
+               <!-- <div style="float: left;"> -->
+                <span style="color:white;margin-right: 5%;float:right;margin-top: 0px;">
+                    <i class="material-icons" id = "homes" onclick="send('hi')">home</i>
+                    <i class="material-icons" id = "close" onclick="close">call_received</i>
+                    <i onclick='javascript:window.parent.Close();' id = "closeb"class="material-icons">close</i>
+                 
+                 </span>
+               <!-- </div> -->
+            </div>
+            
+
+            <!--Chatbot contents goes here -->
+            <div class="chats" id="chats">
+                <div class="clearfix"></div>
+            </div>
+            <!--user typing indicator -->
+            <div class="keypad">
+                <input type="text" id="keypad" class="usrInput browser-default" placeholder="Type a message..." autocomplete="off">
+                <div id="keypad_icon">
+                    <div id="micshow" style="display: block;">
+                        <i class="material-icons" id="speech" >keyboard_voice</i>
+                        <voice>Record Audio</voice>
+                    </div>
+                   <!-- <span id="action"></span>-->
+                    <div id="arrowshow" style="display: none;">
+                        <i class="material-icons" id="spend1" onclick="enter();">send</i>
+                    </div>
+                </div>
+                <!--<i class="material-icons" id="send1" onclick="enter();">send</i>-->
+
+        </div>
+    </div>
+    <!--bot widget -->
+    <div class="profile_div" id="profile_div">
+        <img class="imgProfile" src="./static/img/novaavatar2.png" />
+    </div>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <!--Main Script -->
+    <script type="text/javascript" src="static/js/script.js"></script>
+</body>
+
+</html>

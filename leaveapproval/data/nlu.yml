@@ -1,0 +1,602 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: empID
+  examples: |
+    - tell me employee id
+    - do you know emp id?
+    - empid
+    - EMPID
+    - EmpId
+    - my employee code
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah a cheap restaurant serving international food
+    - ye
+    - uh yes
+    - let's do it
+    - yeah
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that
+    - yeeessssss
+    - you got it
+    - it's correct
+    - go ahead please
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - rejection
+    - rejected
+    - condemn
+    - disapprove
+    - refuse
+    - deny
+    - dismiss
+    - rebuff
+    - renounce
+    - repudiate
+    - scrap
+    - spurn
+    - turn down
+    - veto
+    - burn
+    - cashier
+    - chuck
+    - decline
+    - despise
+    - disallow
+    - disbelieve
+    - discard
+    - discount
+    - discredit
+    - disdain
+    - eliminate
+    - exclude
+    - jettison
+    - jilt
+    - kill
+    - nix
+    - repel
+    - reprobate
+    - repulse
+    - scoff
+    - scorn
+    - scout
+    - second
+    - shed
+    - shun
+    - slough
+    - cast aside
+    - cast off
+    - cast out
+    - give thumbs down to
+    - not buy
+    - pass by
+    - pass on
+    - pass up
+    - put down
+    - shoot down
+    - throw away
+    - throw out
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: signin_of_employee
+  examples: |
+    - login
+    - SignIn
+    - login please
+    - hey help me with login
+    - i need to login
+    - sign up
+    - i want to login with my account
+    - log up
+    - log in
+    - Your HR Digital Assitant. Could you please log in for my help?"
+- intent: logout
+  examples: |
+    - logout please
+    - logout
+    - out
+    - exit
+    - get out
+    - get me out
+    - go away
+    - Exit
+    - i want to exit
+    - please logout me
+    - please exit it
+
+- intent: approved_leaves
+  examples: |
+    - show me approved leaves
+    - show me approved leaves of [next week](daterange)
+    - show me approved leaves of [august](daterange)
+    - employees on leaves for [next month](daterange)
+    - Which employees are on leave [yesterday](daterange)?
+    - employees on leaves
+    - who is on leaves
+    - who is on leaves in [next month](daterange)
+    - who is on leaves in [today](daterange)
+    - who is on leaves in [tomorrow](daterange)
+    - employee on leave
+    - who is on leave
+    - show me all approved leaves of employee
+    - show me approved leave for [next week](daterange)
+    - show me approved leave for [august](daterange)
+    - show me approved leave for [next month](daterange)
+    - show me approved leave for [today](daterange)
+    - employees on leave in [next month](daterange)
+    - employees on leave on [day after tomorrow](daterange)
+    - employees on leave on [after a week](daterange)
+    - employees on leave [today](daterange)
+    - list the employee on leave
+    - list the employees on leave
+
+- intent: asking_for_pending_leaves
+  examples: |
+    - leave requests
+    - approve pending leaves
+    - reject pending leaves
+    - leave approval requests
+    - list of leave approvals
+    - pending leaves
+    - pending requests
+    - list of pending leave
+    - please display list of pending leave
+    - list the pending leaves
+    - display list of pending leaves
+    - What are the pending leave requests?
+    - List out the pending leave requests to approve/reject
+    - I want pending leave requests for my approval
+    - pending leave requests
+    - pending leave requests for my approvals
+    - employees requested for leave
+    - list of employees requested for leave
+    - which employees are requested for leave
+    - all leave requests
+    - all leave requests by employees
+    - share pending leave requests list with me
+    - okay then I want leave requests pending for approval
+    - Help me with leave requests pending for approval
+    - Help me with pending leave requests
+    - Is there any leave request pending for my approval?
+    - What are leave requests by employees?
+    - Who is requested for leave?
+    - List out employees requested for leave
+    - Employees requested for leave
+    - Approve leave requests
+    - All employees requested for leave
+    - Applied leaves by employee
+
+- intent: asking_for_one_leave
+  examples: |
+    - show me [OMI-1055](emp_code1) leaves
+    - display [OMI-1055](emp_code1) pending leave
+    - leave of [OMI-1055](emp_code1)
+    - pending request of [OMI-1055](emp_code1)
+    - pending requests of [OMI-1055](emp_code1)
+    - leave requests of [OMI-1055](emp_code1)
+    - leave approval request of [OMI-1055](emp_code1)
+    - list of leave approvals of [OMI-1055](emp_code1)
+
+- intent: asking_for_one_leave_by_name
+  examples: |
+    - leave requests of [shivani](name2)
+    - leave approval request of [shivani](name2)
+    - list of leave approvals of [shivani](name2)
+    - [shivani](name2) 's leave requests
+    - list of leaves approval of[Pritee bhavsar](name2)
+    - leave request of [priti bhavsar]
+    - display [Pritee] (name2)
+    - [shivani](name2) 's leave approval request
+    - [shivani](name2) 's list of leave approvals
+    - show me pending leaves of [shivani](name2)
+    - show me pending leave of [shivani](name2)
+    - show me [prashant](name2)'s leaves
+    - show me [shivani](name2)'s leave
+    - display [vidya](name2)'s pending leave
+    - display [vidya](name2)'s pending leaves
+    - leave of [yamini](name2)
+    - leaves of [yamini](name2)
+    - Show me requested leave of [Dolly](name2)
+    - Show me requested leaves of [Dolly](name2)
+    - Leave request by [Alexis](name2)
+    - Leave requests by [Alexis](name2)
+    - Leaves requests by [Alexis](name2)
+    - Leave request of [Allison](name2) pending for approval
+    - Leaves request of [Allison](name2) pending for approval
+    - Leave requests of [Allison](name2) pending for approval
+    - Leaves requests of [Allison](name2) pending for approval
+    - I want to see the leave request of [Anna](name2)
+    - I want to see the leaves requests of [Anna](name2)
+    - I want to see the leave requests of [Anna](name2)
+    - I want to see the leaves request of [Anna](name2)
+    - [Chloe](name2)’s leave request
+    - [Chloe](name2)’s leaves request
+    - [Chloe](name2)’s leave requests
+    - [Chloe](name2)’s leaves requests
+    - [Hailey](name2)’s leave request pending for approval
+    - [Hailey](name2)’s leaves request pending for approval
+    - [Hailey](name2)’s leave requests pending for approval
+    - [Hailey](name2)’s leaves requests pending for approval
+    - [Grace](name2)’s applied leave
+    - [Grace](name2)’s applied leaves
+    - [Ava](name2)’s applied leave for approval
+    - [Ava](name2)’s applied leaves for approval
+    - Pending leave request of [Avery](name2)
+    - Pending leaves request of [Avery](name2)
+    - Pending leave requests of [Avery](name2)
+    - Pending leaves requests of [Avery](name2)
+    - pending request of [Avery](name2)
+    - pending requests of [Avery](name2)
+    - Is [Riley](name2) requested for any leave?
+    - Is [Riley](name2) requested for any leaves?
+    - Show me leave request of [lily](name2)
+    - Show me leaves request of [lily](name2)
+    - Show me leave requests of [lily](name2)
+    - Show me leaves requests of [lily](name2)
+    - show me details of leave requests by [Victoria](name2)
+    - show me details of leaves requests by [Victoria](name2)
+    - show me details of leave request by [Victoria](name2)
+    - show me detail of leave requests by [Victoria](name2)
+    - Show me [Mia](name2)’s leave request details
+    - Show me [Mia](name2)’s leaves request details
+    - Show me [Mia](name2)’s leaves requests details
+    - Show me [Mia](name2)’s leave requests details
+    - Show me [Mia](name2)’s leave request detail
+    - I found that [Ashley](name2) requested for leave show me that leave
+    - I found that [Ashley](name2) requested for leaves show me that leaves.
+    - What are the pending leave requests of [Kaylee](name2)?
+    - What are the pending leaves requests of [Kaylee](name2)?
+    - What are the pending leaves request of [Kaylee](name2)?
+    - What are the pending leave request of [Kaylee](name2)?
+    - Show me pending leave request of [Harry](name2) in my account.
+    - Show me [Harry](name2)’s pending leave request in my account.
+    - List out pending leave request of [Wayne](name2) for approve/reject
+    - List out [Wayne](name2)’s pending leave request for approve/reject
+    - I want pending leave requests of [Olivia](name2) for my approval
+    - I want [Olivia](name2)’s pending leave requests for my approval
+    - pending leave requests of [Kaylee](name2)
+    - [Kaylee](name2)’s pending leave requests
+    - pending leave requests of [Taylor](name2) for my approvals
+    - [Taylor](name2)’s pending leave requests for my approvals
+    - all leave requests of [Isabella](name2)
+    - [Isabella](name2)’s all leave requests
+    - share pending leave requests list of [Michel](name2) with me
+    - share [Michel](name2)’s pending leave requests list with me
+    - Help me with leave requests of [Layla](name2) pending for
+    - Help me with leaves requests of [Layla](name2) pending for approval
+    - Help me with leave request of [Layla](name2) pending for approval
+    - Help me with leaves request of [Layla](name2) pending for approval
+    - Help me with [Layla](name2)’s leave requests pending for approval
+    - Is there any leave request of [Camila](name2) pending for my approval?
+    - Is there any [Camila](name2)’s leave request pending for my approval?
+    - What are leave requests by [harry](name2)?
+    - What are [Harry](name2)’s leave requests?
+    - Applied leaves by [Sarah](name2)
+    - Show me leave requests of [Leah](name2) with details
+    - [Sarah](name2)’s Applied leaves
+    - Show me [Sarah](name2)’s leave requests with details
+    - pending leave of [Sarah](name2)
+    - pending leaves of [Sarah](name2)
+    - [Sarah](name2)’s pending leave
+    - [Sarah](name2)’s pending leaves
+- intent: login_data
+  examples: |
+    - employee code is [OMI-83](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-83](emp_code) and password is [Shdhf$765](password)
+    - employee code is [OMI-83](emp_code) and password is [sfju$234](password)
+    - employee code is [OMI-1083](emp_code) and password is [Rmdfr@435](password)
+    - employee code is [OMI-0005](emp_code) and password is [Rmdfr@435](password)
+    - emp code is [OMI-83](emp_code) and password is [Omfys@123](password)
+    - emp code for you [OMI-83](emp_code)
+    - code is [OMI-83](emp_code)
+    - the employee code is [OMI-83](emp_code)
+    - my employee code is [OMI-1036](emp_code)
+    - the code is [OMI-1436](emp_code)
+    - [OMI-5546](emp_code) is my employee code
+    - employee code is [OMI-1036](emp_code) and password is [Omfys@123](password)
+    - employee code is [OMI-0001](emp_code) and password is [Omfys@123](password)
+    - employee code is [OMI-0001](emp_code) and password and [Omfys@123](emp_code)
+
+- intent: approve_reject_one_leave
+  examples: |
+    - details of [1](ordinal) leave
+    - [1st](ordinal) leave
+    - [first](ordinal) leave
+    - [2nd](ordinal)
+    - [second](ordinal)
+    - [3rd](ordinal)
+    - [4th](ordinal) leave
+    - [fourth](ordinal) leave
+    - [5th](ordinal)
+    - [fifth](ordinal)
+    - [6th](ordinal)
+    - [sixth](ordinal) leave
+    - [7th](ordinal) leave
+    - [seventh](ordinal)
+    - [8th](ordinal)
+    - [Eighth](ordinal)
+    - [approve](command) [1](ordinal) leave
+    - [approve](command) [2](ordinal) leave
+    - [approve](command) [3](ordinal) leave
+    - [approve](command) [4](ordinal) leave
+    - [approve](command) [5](ordinal) leave
+    - [approve](command) [6](ordinal) leave
+    - [approve](command) [10](ordinal) leave
+    - i want to [reject](command) [9](ordinal) leave
+    - [rejected](command) [8](ordinal) leave
+    - [approve](command) [11](ordinal) leave
+    - [approve](command) [12](ordinal) leave
+    - [approve](command) [13](ordinal) leave
+    - [approve](command) [14](ordinal) leave
+    - [rejected](command) [1](ordinal) leave
+    - [rejected](command) [2](ordinal) leave
+    - [rejected](command) [3](ordinal) leave
+    - [rejected](command) [4](ordinal) leave
+    - [rejected](command) [5](ordinal) leave
+    - [rejected](command) [6](ordinal) leave
+    - [rejected](command) [10](ordinal) leave
+    - [rejected](command) [11](ordinal) leave
+    - [rejected](command) [12](ordinal) leave
+    - [rejected](command) [133](ordinal) leave
+    - [rejected](command) [14](ordinal) leave
+    - - details of [1](ordinal) leave
+    - [approve](command) [OMI-1036](ordinal)
+    - [approve](command) [OMI-1032](ordinal)
+    - [approve](command) [OMI-1034](ordinal)
+    - [approve](command) [OMI-1031](ordinal)
+    - [approve](command) [OMI-1041](ordinal)
+    - [approve](command) [OMI-1026](ordinal)
+    - [approve](command) [OMI-1045](ordinal)
+    - [approve](command) [OMI-0086](ordinal)
+    - [rejected](command) [OMI-0001](ordinal)
+    - [approve](command) [OMI-0083](ordinal)
+    - [approve](command) leave with employee code [OMI-1045](ordinal)
+    - [approve](command) leave with employee code [OMI-1051](ordinal)
+    - [rejected](command) leave with employee code [OMI-1052](ordinal)
+    - [rejected](command) leave with employee code [OMI-1060](ordinal)
+    - i am giving [approval](command) for leave with employee code [OMI-1061](ordinal)
+    - i am giving [approval](command) for leave with employee code [OMI-1062](ordinal)
+    - [approve](command) leave for employee code [OMI-1055](ordinal)
+    - employee code [OMI-1037](ordinal)
+    - employee code is [OMI-1045](ordinal)
+    - employee code = [OMI-1032](ordinal)
+    - i am giving [approval](command) for leave with employee id [OMI-1061](ordinal)
+    - i am giving [approval](command) for leave with employee id [OMI-1062](ordinal)
+    - [approve](command) leave for employee id [OMI-1055](ordinal)
+    - employee id [OMI-1037](ordinal)
+    - employee id is [OMI-1045](ordinal)
+    - employee id = [OMI-1032](ordinal)
+    - [approve](command) leave with employee id [OMI-1045](ordinal)
+    - [approve](command) leave with employee id [OMI-1051](ordinal)
+    - [rejected](command) leave with employee id [OMI-1052](ordinal)
+    - [rejected](command) leave with employee id [OMI-1060](ordinal)
+    - i am giving [approval](command) for leave with emp id [OMI-1061](ordinal)
+    - i am giving [approval](command) for leave with emp id [OMI-1062](ordinal)
+    - [approve](command) leave for emp id [OMI-1055](ordinal)
+    - emp id [OMI-1037](ordinal)
+    - emp id is [OMI-1045](ordinal)
+    - emp id = [OMI-1032](ordinal)
+    - [approve](command) leave with emp id [OMI-1045](ordinal)
+    - [approve](command) leave with emp id [OMI-1051](ordinal)
+    - [rejected](command) leave with emp id [OMI-1052](ordinal)
+    - [rejected](command) leave with emp id [OMI-1060](ordinal)
+    - i am giving [approval](command) for leave with emp code [OMI-1061](ordinal)
+    - i am giving [approval](command) for leave with emp code [OMI-1062](ordinal)
+    - [approve](command) leave for emp code [OMI-1055](ordinal)
+    - emp code [OMI-1037](ordinal)
+    - emp code is [OMI-1045](ordinal)
+    - emp code = [OMI-1032](ordinal)
+    - [approve](command) leave with emp code [OMI-1045](ordinal)
+    - [approve](command) leave with emp code [OMI-1051](ordinal)
+    - [rejected](command) leave with emp code [OMI-1052](ordinal)
+    - [rejected](command) leave with emp code [OMI-1060](ordinal)
+
+- intent: leaves
+  examples: |
+    - leaves?
+    - leaves section please?
+    - go to leaves section
+    - let's have leaves.
+    - leaves
+    - leaves please?
+    - leaves module please
+    - go to leaves
+    - Leaves please?
+    - leaves management
+    - leave management
+    - Leave management
+    - continue
+    - leave
+    - continue leaves
+    - continue leave
+    
+- intent: emp_code_i
+  examples: |
+    - [approve](command) leaves
+    - [approve](command) leave
+    - [approve](command) this leave
+    - [rejected](command) this leave
+    - [rejected](command) leaves
+    - [rejected](command) leave
+    - [approve](command)
+    - [rejected](command)
+
+- intent: main_menu
+  examples: |
+    - home
+    - go to main menu
+    - show me main menu
+    - Home
+    - main menu
+    - Main menu
+    - #
+    - #main
+    - Main Menu
+    - hm
+    - Nova main menu
+    - services provided by nova
+    - Nova services
+    - nova services
+    - services by nova
+
+
+# - intent: data
+  # examples: |
+  #   - emp code is OMI-83 [OMI-83](emp_code)
+  #   - emp code for you OMI-83 [OMI-83](emp_code)
+  #   - code is OMI-83 [OMI-83](emp_code)
+  #   - the employee code is OMI-83 [OMI-83](emp_code)
+  #   - my employee code is OMI-1036 [OMI-1036](emp_code)
+  #   - hmm the code is OMI-1436 [OMI-1436](emp_code)
+  #   - OMI-5546 is my employee code [OMI-5546](emp_code)
+  #   - code is OMI-322 [OMI-322](emp_code)
+  #   - OMI-4532 [OMI-4532](emp_code)
+  #   - OMI-0101 [OMI-0101](emp_code)
+  #   - e code is OMI-87 [OMI-87](emp_code)
+  #   - OMI-111 [OMI-111](emp_code)
+  #   - OMI-45 [OMI-45](emp_code)
+  #   - [OMI-8283](emp_code)
+  #   - [OMI-4325](emp_code)
+  #   - [OMI-6509](emp_code)
+  #   - [OMI-0083](emp_code)
+  #   - [OMI-0034](emp_code)
+  #   - hmm pass is Omfys@3425 [Omfys@3425](password)
+  #   - password is Omfys@123 [Omfys@123](password)
+  #   - my password is Omfys@333 [Omfys@333](password)
+  #   - okay here is my password i.e Omfys@0101 [Omfys@0101](password)
+  #   - this is my password Omfys@5555 [Omfys@5555](password)
+  #   - hmm employee code OMI-2341 [OMI-2341](password)
+  #   - password is [Omfys@3401](password)
+  #   - password is [Omfys@333](password)
+  #   - password is  [Omfys@8792](password)
+  #   - password is  [Omfys@0111](password)
+  #   - password is [Omfys@9990](password)
+  #   - password is  [Omfys@345](password)
+  #   - [OMI-1023](emp_code)
+  #   - [Omfys@123](password)
+  #   - [OMI-1003](emp_code)
+  #   - [OMI-1039](emp_code)
+  #   - [OMI-1031](emp_code)
+  #   - [OMI-0088](emp_code)
+  #   - [OMI-0081](emp_code)
+  #   - [OMI-0090](emp_code)
+  #   - [OMI-1050](emp_code)
+  #   - [OMI-1038](emp_code)
+  #   - [OMI-1036](emp_code)
+  #   - [OMI-1053](emp_code)
+  #   - [OMI-0075](emp_code)
+  #   - [OMI-1051](emp_code)
+  #   - [OMI-0087](emp_code)
+  #   - [OMI-0085](emp_code)
+  #   - [OMI-22](emp_code)
+  #   - [OMI-1041](emp_code)
+  #   - [OMI-0072](emp_code)
+  #   - [OMI-0086](emp_code)
+  #   - [OMI-0096](emp_code)
+  #   - [OMI-0076](emp_code)
+  #   - [OMI-1044](emp_code)
+  #   - [OMI-1046](emp_code)
+  #   - [OMI-1049](emp_code)
+  #   - [OMI-0003](emp_code)
+  #   - [OMI-0001](emp_code)
+  #   - [OMI-1054](emp_code)
+  #   - [OMI-40](emp_code)
+  #   - [Ajay@123](password)
+  #   - [Y@mini22](password)
+  #   - [Shri@160243](password)
+  #   - [Pratik$987](password)
+  #   - [Arjun@9999](password)
+  #   - password is [Ajay@123](password)
+  #   - password is [Y@mini22](password)
+  #   - password [Shri@160243](password)
+  #   - my pass is [Pratik$987](password)
+  #   - pass for login [Arjun@9999](password)
+  #   - employee code is [OMI-1036](emp_code)
+  #   - password is [Omfys@123](password)
+  #   - okay buddy my emp code is [OMI-1036](emp_code)
+  #   - hmm my password is [Omfys@123](password)

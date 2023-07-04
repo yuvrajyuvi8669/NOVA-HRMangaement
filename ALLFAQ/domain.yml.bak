@@ -1,0 +1,190 @@
+version: "2.0"
+
+intents:
+  
+  - attendance
+  - general
+  - travel
+  - leave
+  - login_data
+  - faq
+  
+  
+ 
+actions:
+  - action_attendance
+  - action_general
+  - action_travel
+  - action_leave
+  - action_set_login_slots
+
+slots:
+  emp_code:
+    type: text
+    influence_conversation: false
+  emp_code1:
+    type: list
+    influence_conversation: true
+  login_correct:
+    type: bool
+    influence_conversation: true
+  login_status:
+    type: bool
+    influence_conversation: true
+  logout_status:
+    type: bool
+    influence_conversation: true
+  password:
+    type: text
+    influence_conversation: true
+
+  
+responses:
+  
+
+ 
+
+
+  utter_attendance/office_timing:
+  - text: "Office starts at 09:30 AM and closes at 06:30 PM."
+
+  utter_attendance/working_days:
+  - text: "We do work Monday to Saturday"
+
+  utter_attendance/weekly_off:
+  - text: "We have weekly off on Sunday."
+
+  utter_attendance/reporting_time:
+  - text: "The Office Reporting time is 9.30 am."
+
+  utter_attendance/late_extreme_emergency:
+  - text: "If you come late due to an extreme emergency then your late coming would be considered for that specific incident."
+
+  utter_attendance/late_to_office:
+  - text: You have been given with grace period of 5 late comings/early going in a month for a genuine reason, hence you may come late only upto 5 days in a month.
+
+  utter_attendance/early_office:
+  - text: You have been given with grace period of 5 late comings/early going in a month for a genuine reason, hence you may leave early only upto 5 days in a month.
+  
+  utter_attendance/grace_period:
+  - text: "Every 3 late coming /early going over and above 5 days in a month would be considered for deduction of half day leave or half day LWP based on the leaves availability"
+
+  utter_attendance/training_and_application_of_leave:
+  - text: "No, you are not eligible for PL/CL during the training period."
+
+  utter_attendance/probation_and_application_of_leave:
+  - text: "You will unable to apply PL, unless you get probation confirmation, however, you will be able to apply for CL."
+
+  utter_attendance/joining_and_application_of_leave:
+  - text: "As per policy, you will not be able to apply leaves by joining weekends & holidays."
+
+
+  utter_attendance/no_of_CL:
+  - text: "2 CL for each quarter will get credited at the start of quarter in your leave account."
+
+  utter_attendance/no_of_PL:
+  - text: "1.5 PL will get credit in your leave account at the start of subsequent month."
+
+  utter_attendance/consider_as_half_day:
+  - text: "If you contribute more than 4 hrs but less than 6 hrs, would be considered half day present for respective day"
+
+  utter_attendance/consider_as_full_day:
+  - text: "If you contribute less than 4 hrs for respective day would be considered as an absent for the day."
+
+  utter_attendance/days_before_apply_for_leaves:
+  - text: "In case you are applying CL, need to apply at least on day before or same day in case of emergency. If you are applying for PL, need to apply at least 3 days in advance."
+
+  utter_general/login:
+  - text: You can do login by using your employee code and password. This is the [link](http://mindsconnect.omfysgroup.com) to login in Mindsconnect application and in NOVA for your all details. If you want to commumicate with NOVA provide your login credential to NOVA when she will ask.
+    
+  utter_general/payslip:
+  - text: There are two ways to get payslip. 1)Through [Mindsconnect Application](http://mindsconnect.omfysgroup.com)  2) [Through NOVA](http://mindsconnect.omfysgroup.com). Ask NOVA to "download payslip" and follow the further procedure. You will get desired payslip then you can download it by clicking on link.
+
+  utter_general/training:
+  - text: You can do request for training(Internal/External) by using minds connect application or you can ask NOVA to create a training request. Nova will forward your training request to HR department. And when your request will get accept you can start your training.
+
+  utter_general/new_employee:
+  - text: OMFYS is a Global IT company Headquartered in Croydon, United Kingdom. The India office is based out in Pune. The company provides Digital Transformation solutions and services to enterprises across the Globe. OMFYS offerings mainly include – Business Rule Engine Automation, Business Process Management Workflow Automation, AI Analytic Platform, Visualization Solutions, Oracle AI ChatBot Solutions, RPA and Cognitive Solutions, Digital Assistants (Chatbots), and other Cutting-edge Technology Integration Solutions on Cloud. OMFYS has highly skilled, well trained and motivated team ready to work cohesively to deliver IT solutions across UK, US & India. The business operations across the globe are efficiently supported by the company’s development centers located in UK and India.
+
+
+  utter_general/townhall_meeting:
+  - text: Currently We haven't scheduled any townhall meeting. We'll notify you with date and link to join meeting when townhall meeting will be arranged
+
+  utter_travel/local_conveyance:
+  - text: Local conveyance is an amount which would be given for local travel expenses such as Autorikshaw, Taxi, local Metro, local Bus, Local train etc.
+
+  utter_travel/per_diem:
+  - text: "Per-diem is an amount of money paid for each day that an employee works away from their home or their office."
+
+  utter_travel/liquour_expenses:
+  - text: You will not get reimbursement on liquor expenses except  in cases where an official guest is to be entertained, however it should have a prior approval.
+
+  utter_travel/leave_and_travel:
+  - text: No, You can't opt leaves by combining your travel.
+
+  utter_travel/travel_cancel:
+  - text: You should immediately inform / notify to HR if your travel get cancelled so that necessary bookings can be cancelled.
+
+  utter_travel/submission_of_claim:
+  - text: You should submit Travel Claim form along with all your original bills/ tickets/ boarding pass / stay bills etc along with an approval of Reporting Authority.
+
+  utter_travel/reimbursement_of_claim:
+  - text: You will be getting your reimbursement in the date range 5th to 10th of subsequent month of claim submission.
+
+  utter_travel/When_should_I_submit_my_Claims:
+  - text: You will be getting your reimbursement in the date range 5th to 10th of subsequent month of claim submission.
+
+  utter_travel/advance_amount:
+  - text: Yes, You will be getting an advance amount if you submit your travel requisition at least 5 days prior to your travel date.
+
+  utter_travel/Travel_Requisition:
+  - text: You should submit it at least 5 days in advance
+
+  utter_travel/bills_against_the_daily_allowance:
+  - text: Yes, You need to submit your bills in original.
+
+  utter_travel/daily_allowance_amount_me:
+  - text: The daily allowance is Rs.200/- Per day.
+
+  utter_travel/daily_allowance:
+  - text: Daily Allowance is meant to cover to food expenses including breakfast,lunch,dinner etc.
+
+  utter_travel/amount_of_self_arranged_accomodation:
+  - text: Yes, You will be entitled for Rs.300/-per day for self-arranged accommodation.
+
+  utter_travel/metro_cities:
+  - text: Its Mumbai, Bangalore, Delhi, Hyderabad, Chennai and Kolkata
+
+  utter_travel/non_metro_cities:
+  - text: All cities other than Metro cities are Non-Metro Cities as per Travel Policy.
+
+  utter_travel/monetary_limits_for_hotel:
+  - text: The monetary limit for hotel accommodation / lodging i is from Rs.1000 to Rs.1500/- per day in Metro city and Rs.800/- to Rs.1200/- per day in Non-Metro City.
+
+  utter_travel/search_for_stay:
+  - text: If OMFYS has tied up with specific hotels in the city you are travelling, then you need not to search for any other, however, if there is not tie ups then you will have to search and finalize it within the monetary limits specified.
+
+  utter_travel/not_stay_to_hotel:
+  - text: You should not stay at Hotel in case client has booked your accommodation at their Guest House or any other location.
+
+  utter_travel/self_arranged_accomodation:
+  - text: You will be entitled for Rs.300/-per day for self-arranged accommodation.
+
+  utter_leave/CL_PL_LWP_leave:
+  - text: P.L. stands for Paid Leave. PL is encashable and could be carried over to next year. Paid Leave will be 1 day Basic Salary. <br>C.L. stands for Casual Leave. C.L. is fixed and every employee(Except Trainee) has to complete the same. It will neither be encashed nor carried over to next year.<br>L.W.P stands for Leave Without Pay. L.W.P . If you have LWP checked for the Salary Component, there will be reduction in Amount based on no. of LWP of an Employee for that month.
+
+  utter_leave/leave_services_check:
+  - text: Before taking leave you can check your leave related queries in [Mindsconnect Application](http://mindsconnect.omfysgroup.com) or You can ask for to NOVA by going in Leave Management. You can check eligibiligy, leave balance, leave status, or apply for leave. As per the government policy leave by joining with week off/holidays are considered as Sandwich Leave. Sandwich Leave Policy - It is kind of leave policy in which a company deducts leaves of an employee for week offs if that employee applies leave the day after and before the week offs. For eg - If you have weekoffs on Saturday and Sunday and you apply leave for Friday and Monday.... If you apply leave Friday. But on temporarly basis we are not deducting leave of an employee for holiday/weekoff if employee applied for leave joining with weeekoff/holidays. 
+  
+  utter_faq:
+  - text: "You can ask any questions by typing in the chat box below. Here are some sample frequently asked questions!!!👇🏼<br>
+           Which are the working days?<br>
+           Which are weekly off?<br>
+           What is office timing?<br>
+           What technology platforms does company use?"
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

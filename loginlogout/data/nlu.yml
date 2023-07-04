@@ -1,0 +1,266 @@
+version: "2.0"
+nlu:
+
+- intent: user_login
+  examples: |
+    - login
+    - SignIn
+    - login please
+    - hey help me with login
+    - i need to login
+    - sign up
+    - i want to login with my account
+    - log up
+    - log in
+    - Your HR Digital Assitant. Could you please log in for my help?"
+
+- intent: logout
+  examples: |
+    - logout please
+    - logout
+    - out
+    - exit
+    - get out
+    - get me out
+    - go away
+    - Exit
+    - i want to exit
+    - please logout me
+    - please exit it
+
+- intent: greet
+  examples: |
+    - Hello
+    - hello
+    - hey
+    - hi
+    - heya
+    - howdy
+    - hey there
+    - Hi
+    - h
+    - heyeeeeeeeee
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - bye bye
+    - see ya
+    - see you later
+
+- intent: thanks
+  examples: |
+    - okay thanks
+    - that you so much
+    - thanks for your time really
+
+- intent: data
+  examples: |
+    - emp code is OMI-83 [OMI-83](emp_code)
+    - emp code for you OMI-83 [OMI-83](emp_code)
+    - code is OMI-83 [OMI-83](emp_code)
+    - the employee code is OMI-83 [OMI-83](emp_code)
+    - my employee code is OMI-1036 [OMI-1036](emp_code)
+    - hmm the code is OMI-1436 [OMI-1436](emp_code)
+    - OMI-5546 is my employee code [OMI-5546](emp_code)
+    - code is OMI-322 [OMI-322](emp_code)
+    - OMI-4532 [OMI-4532](emp_code)
+    - OMI-0101 [OMI-0101](emp_code)
+    - e code is OMI-87 [OMI-87](emp_code)
+    - OMI-111 [OMI-111](emp_code)
+    - OMI-45 [OMI-45](emp_code)
+    - [OMI-8283](emp_code)
+    - [OMI-4325](emp_code)
+    - [OMI-6509](emp_code)
+    - [OMI-0083](emp_code)
+    - [OMI-0034](emp_code)
+    - hmm pass is Omfys@3425 [Omfys@3425](password)
+    - password is Omfys@123 [Omfys@123](password)
+    - my password is Omfys@333 [Omfys@333](password)
+    - okay here is my password i.e Omfys@0101 [Omfys@0101](password)
+    - this is my password Omfys@5555 [Omfys@5555](password)
+    - hmm employee code OMI-2341 [OMI-2341](password)
+    - password is [Omfys@3401](password)
+    - password is [Omfys@333](password)
+    - password is  [Omfys@8792](password)
+    - password is  [Omfys@0111](password)
+    - password is [Omfys@9990](password)
+    - password is [Omfys@345](password)
+    - [OMI-1023](emp_code)
+    - [Omfys@123](password)
+    - [OMI-1003](emp_code)
+    - [OMI-1039](emp_code)
+    - [OMI-1031](emp_code)
+    - [OMI-0088](emp_code)
+    - [OMI-0081](emp_code)
+    - [OMI-0090](emp_code)
+    - [OMI-1050](emp_code)
+    - [OMI-1038](emp_code)
+    - [OMI-1036](emp_code)
+    - [OMI-1053](emp_code)
+    - [OMI-0075](emp_code)
+    - [OMI-1051](emp_code)
+    - [OMI-0087](emp_code)
+    - [OMI-0085](emp_code)
+    - [OMI-22](emp_code)
+    - [OMI-1041](emp_code)
+    - [OMI-0072](emp_code)
+    - [OMI-0086](emp_code)
+    - [OMI-0096](emp_code)
+    - [OMI-0076](emp_code)
+    - [OMI-1044](emp_code)
+    - [OMI-1046](emp_code)
+    - [OMI-1049](emp_code)
+    - [OMI-0003](emp_code)
+    - [OMI-0001](emp_code)
+    - [OMI-1054](emp_code)
+    - [OMI-40](emp_code)
+    - [Ajay@123](password)
+    - [Y@mini22](password)
+    - [Shri@160243](password)
+    - [Pratik$987](password)
+    - [Arjun@9999](password)
+    - password is [Ajay@123](password)
+    - password is [Y@mini22](password)
+    - password [Shri@160243](password)
+    - my pass is [Pratik$987](password)
+    - pass for login [Arjun@9999](password)
+    - employee code is [OMI-1036](emp_code)
+    - password is [Omfys@123](password)
+    - okay buddy my emp code is [OMI-1036](emp_code)
+    - hmm my password is [Omfys@123](password)
+    - [OMI-1036](emp_code)
+    - [Omfys@123](password) [Omfys@123](password)
+    
+- intent: empID
+  examples: |
+    - tell me employee id
+    - do you know emp id?
+    - empid
+    - EMPID
+    - EmpId
+    - my employee code
+
+- intent: main_menu
+  examples: |
+    - home
+    - go to main menu
+    - show me main menu
+    - Home
+    - main menu
+    - Main menu
+    - #
+    - #main
+    - Main Menu
+    - hm
+    - Nova main menu
+    - services provided by nova
+    - Nova services
+    - nova services
+    - services by nova
+    
+- regex: emp_code
+  examples: |
+    - /b(OMI-)[0-9]{4}/b
+
+- intent: faq
+  examples: |
+    - faq
+    - FAQ
+    - Faq
+    - visit faq
+    - i want to ask some questions
+
+- intent: prof_info
+  examples: |
+    - Profile Info
+    - What is the profile info?
+    - Tell me info about profile?
+    - Give me some inf please?
+    - Show me my profile
+    - I wonder what is my profile info?
+    - profile info please?
+    - Tell me profile information
+    - Is the profile info there?
+    - Please tell me profile info you bot?
+    - Haa haa profile info please?
+    - Show me pro info
+    - look into my info
+    - information please?
+    - Oh, sorry, tell me about myself
+    - tell me about me
+    - Current profile info
+    - What is the personal info?
+    - I wonder what is my personal info?
+    - personal info please?
+    - Tell me personal information
+    - Is the personal info there?
+    - Please tell me personal info you bot?
+    - Haa haa personal info please?
+    - Current personal info
+    - Tell me info about profile
+    - continue
+    - prof info
+    - continue profile info
+    - continue profile
+  
+- intent: leaves
+  examples: |
+    - leaves?
+    - leaves section please?
+    - go to leaves section
+    - let's have leaves.
+    - leaves
+    - leaves please?
+    - leaves module please
+    - go to leaves
+    - Leaves please?
+    - leaves management
+    - leave management
+    - Leave management
+    - continue
+    - leave
+    - continue leaves
+    - continue leave
+
+- intent: Training_Management
+  examples: |
+    - continue with Training management
+    - Training Management
+    - training management
+    - Trainings Management
+    - trainings
+    - Trainings
+    - all trainings
+    - Show me training
+    - show me trainings
+    - Show me training management
+    - trainings for trainee
+    - current trainings
+    - could you give me information about current training?
+    - i want trainings information
+    - go to training management menu
+    - visit training management
+    - trainings in my account
+    
+- intent: tte_mgmt
+  examples: |
+    - projects information please?
+    - project module please
+    - go to projects
+    - projects please?
+    - i want to visit project mangement menu
+    - i want to avail project mansgement service
+    - I am interested in project management services
+    - I am looking for project management services
+    - My company needs project management services
+    - If you are interested in project management services, please contact me
+    - Project management services are of interest to me
+    - Project management service is what I want
+    - Provide me with project management services
+    - A project management service would be most useful to me
+    - The service I need is project management
+
+
+

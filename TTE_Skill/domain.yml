@@ -1,0 +1,415 @@
+version: "2.0"
+
+intents: 
+  - affirm
+  # - empID
+  - deny
+  # - user_login
+  - login_data
+  # - greet
+  - thanks
+  # - logout
+  # - goodbye
+  - tte_mgmt
+  - tte_details
+  - tte_data
+  # - main_menu
+  - same_project
+  - other_project
+  - back_to_previous_menu
+  - request_for_task
+  - Close_TTE_form  
+  # - good
+  # - bad
+  # - okay
+  # - stop
+  # - add_TTE
+  # - view_TTE  
+  # - out_of_scope
+  # - trainee_details
+  # - approved_projects
+  # - pending_projects
+  # - completed_projects
+  # - ongoing_projects
+  # - update_status
+
+slots:
+  task_status:
+    type: text
+    influence_conversation: true
+  activity_name: 
+    type: text
+    influence_conversation: true
+  start_time: 
+    type: text
+    influence_conversation: true
+  end_time: 
+    type: text
+    influence_conversation: true
+  tte_data: 
+    type: list
+    influence_conversation: false
+  logout_status:
+    type: bool
+    influence_conversation: true
+  login_status:
+    type: bool
+    influence_conversation: true
+  # Timesheet: 
+  #   type: list
+  #   influence_conversation: false
+  # resources:
+  #   type: list
+  #   influence_conversation: false
+  # project_type:
+  #   type: list
+  #   influence_conversation: false
+  # pr_code:
+  #   type: list
+  #   influence_conversation: false
+  # s_date:
+  #   type: list
+  #   influence_conversation: false
+  # e_date:
+  #   type: list
+  #   influence_conversation: false
+  # s_time:
+  #   type: list
+  #   influence_conversation: false
+  # e_time: 
+  #   type: list
+  #   influence_conversation: false
+  # activity: 
+  #   type: list
+  #   influence_conversation: false
+  # comment:
+  #   type: list
+  #   influence_conversation: false
+  # task-type: 
+  #   type: list
+  #   influence_conversation: false
+  # date:
+  #   type: list
+  #   influence_conversation: false
+  # time:
+  #   type: list
+  #   influence_conversation: false
+  project_name: 
+    type: list
+    influence_conversation: false
+  project_id:
+    type: list
+    influence_conversation: false
+  sub_task_id:
+    type: list
+    influence_conversation: false
+  main_task_id:
+    type: list
+    influence_conversation: false
+  sub_sub_task_id:
+    type: list
+    influence_conversation: false
+  sub_task_name:
+    type: list
+    influence_conversation: false
+  main_task_name:
+    type: list
+    influence_conversation: false
+  sub_sub_task_name:
+    type: list
+    influence_conversation: false
+  task_description: 
+    type: text
+    influence_conversation: false
+  emp_code: 
+    type: text
+    influence_conversation: true
+  password:
+    type: text
+    influence_conversation: true
+
+entities: 
+  - start_time
+  - end_time
+  - time:
+      roles:
+       - start_time
+       - end_time
+  - activity_name
+  - tte_data
+  - task_status
+  - comment
+  - project_name
+  - sub_task_name
+  - sub-sub_task_name
+  - main_task_name
+  - task_description
+  - emp_code
+  - password  
+  # - task-type
+  # - resources
+  # - project_type
+  # - pr_code
+  # - date
+  # - time
+
+actions: 
+  - action_set_login_slots
+  - action_check_login_status
+  - action_check_logged_for_project_management
+  - validate_show_projects_details_form
+  - action_show_projects_details_form_submit
+  # - validate_user_login_form
+  - validate_projects_form
+  # - action_user_login_form_submit
+  - action_projects_form_submit
+  - validate_add_tte_form
+  - action_check_logged_for_tte
+  - action_add_tte_form_submit
+  - TTE_entry_to_Database_form_submit
+  - action_display_project_list
+  # - action_restart
+  - action_getTTE_details
+  - validate_TTE_entry_to_Database_form 
+  - action_reset
+  - action_backTo_lastproject
+  - utter_default_fallback
+  # - action_logout
+  - action_add_task_description_slot
+  - action_check_logged_for_main_menu
+  
+responses: 
+  utter_default_fallback: 
+  - text: Could you please rephrase it for me. I am not geeting what do you want to say?
+  - text: OOPs!! I missed something. Could you please rephrase it? 
+
+  utter_service_failed_login_message:
+  - text: Login Please
+  - text: Sign Up Please
+
+  # utter_ask_emp_code:
+  # - text: Could you please provide me Employee Id?
+  
+  # utter_ask_password:
+  # - text: Could you please provide me password?
+  
+  utter_affirm: 
+  - buttons: 
+    - payload: "Profile Info"
+      title: "Profile Info"
+    - payload: leaves
+      title: "Leave Management"
+    - payload: Trainings
+      title: Trainings
+    - payload: Projects
+      title: I am looking for project management services
+    - payload: Enquiries
+      title: Enquiries
+    # - payload: logout
+    #   title: Exit
+    # text: "You are in to avail my assistance. Choose your requirement."
+    text: "You are to avail my assistance. You can choose features to get started or type in a direct message."
+
+  
+  utter_bad: 
+  - text: "I'm sorry If you feel so"
+  
+  utter_bot_helping: 
+  - text: "Glad to be of service."
+  - text: Thanks!
+
+  
+  utter_bot_not_helping: 
+  - text: "Apologize! If I'm not helping you much"
+  - text: "Sorry! If I'm not helping you much"
+  
+  utter_coffee: 
+  - text: "I am a bot I can not make coffee for you"
+  - text: "Yeah...! coffee contains cafen"
+  - text: "I think coffee is black"
+  - text: "Coffee can be with milk or without milk"
+  
+  # utter_default: 
+  # - buttons: 
+  #   - payload: "main menu"
+  #     title: Home
+  #   text: Visit Home
+
+  # utter_logout_meesage: 
+  #   - text: "You have successfully logged out..."
+
+  # utter_goodbye: 
+  #   - text: "Bye!Talk to you later"
+  #   - text: "Bye Bye :("
+  #   - text: BBye! Have a nice day ahead.
+
+  # utter_greet: 
+  #   - buttons: 
+  #       - payload: login
+  #         title: Login
+  #     text: "Hey! I am NOVA. Your HR Digital Assitant. Could you please log in for my help?"
+ 
+  utter_help_user: 
+    - buttons: 
+      - payload: "Profile Info"
+        title: "Profile Info"
+      - payload: leaves
+        title: "Leave Management"
+      - payload: Trainings
+        title: Trainings
+      - payload: tte_mgmt 
+        title: Project Mgmt
+      - payload: Enquiries
+        title: Enquiries
+      
+      text: "Congratulations! You are to avail my assistance. You can choose features to get started or type in a direct message."
+
+  utter_help_user_after_loggedin: 
+    - buttons: 
+      - payload: "Profile Info"
+        title: "Profile Info"
+      - payload: leaves
+        title: "Leave Management"
+      - payload: Trainings
+        title: Trainings
+      - payload: tte_mgmt 
+        title: Project Mgmt
+      - payload: Enquiries
+        title: Enquiries
+      
+      # text: "You are in to avail my assistance. Choose your requirement?"
+      text: "You are to avail my assistance. You can choose features to get started or type in a direct message."
+
+  utter_initialize_message: 
+  - buttons: 
+    - payload: login
+      title: Login
+    # text: "Hey! I am NOVA. Your HR Digital Assitant. Could you please log in for my help?"
+    text: "Hey! I am NOVA. Your HR Digital Assitant. To be proceed please log in."
+  
+  utter_invalid_login: 
+  - buttons: 
+    - payload: login
+      title: Login
+    text: "Your [employee code|password] incorrect. Please provide valid credentials."
+  
+  
+
+  utter_ask_main_task_name: 
+  # - text: "Could you please provide me main task serial number or main task name?"
+  - text: "Please provide me main task serial number or main task name."
+
+  utter_ask_sub_sub_task_name:
+  # - text: "Could you please provide me sub-subtask serial number or sub-subtask name?"
+  - text: "Please provide me sub-subtask serial number or sub-subtask name."
+  
+  utter_ask_sub_task_name:
+  # - text: "Could you please provide me subtask serial number or subtask name?"
+  - text: "Please provide me subtask serial number or subtask name."
+  
+  utter_ask_project_id:
+  # - text: "Could you please provide me project serial number or project name?"
+  - text: "Please provide me project serial number or project name."
+
+  utter_ask_task_description:
+  # - text: Could you please provide me task description so that I can notify project manager for new task request?
+  - text: Please provide me task description so that I can notify project manager for new task request.
+
+  utter_continue_project:
+  - buttons: 
+    - payload: Pending Projects
+      title: Pending Projects
+    - payload: Approved Projects
+      title: Approved Projects
+    - payload: Ongoing Projects
+      title: Ongoing Projects
+    - payload: Completed Projects
+      title: Completed Projects
+    - payload: Add TTE
+      title: TTE  
+    - payload: View TTE
+      title: View TTE
+    # text: "Could you please select your requirement for project management?"
+    text: "Please choose your requirement for project management."
+
+  utter_continue_project_management:
+  - buttons: 
+    - payload: Project
+      title: Project Mgmt.
+    # text: "Would you like to continue with my assistance for project management?"
+    text: Do you want to avail my any further assistance for project management?
+
+  utter_ask_task_status: 
+  # - text: "Could you please confirm with task status?(In Progress|Hold|Completed)"
+  # - text: "Ohh!!Your task status is missing. Please let me know.(In Progress|Hold|Completed)"
+  - text: "Please select one of the choices below to update task status:\  \n• In Progress\  \n• Hold\  \n•	Completed"
+  utter_ask_activity_name: 
+  # - text: "Could you please provide me activity name?"
+  # - text: "Which activity you have performed?"
+  - text: "Please provide activity done by you on the selected task."
+
+  utter_ask_start_time: 
+  - text: "Please provide start time of performed task activity."
+  # - text: "Please provide start time for this activity"
+  # - text: "Start time for the activity ."
+
+  utter_ask_end_time: 
+  # - text: "Finished time for this activity?"
+  - text: "Please provide end time of performed task activity."
+  # - text: "Let me know end time for the activity."
+
+  utter_newTTE_sameproject:
+    - text: Do you want to continue task and time entry for same project or other project?
+      buttons:
+      - payload: "same project"
+        title: "Same Project"
+      - payload: "other project"
+        title: "Other Project"
+      - payload: "go back"
+        title: "Back"
+      
+
+forms: 
+  projects_form:
+    project_type:
+      - type: from_entity
+        entity: project_type
+    resources:
+      - type: from_entity
+        entity: resources
+
+  TTE_entry_to_Database_form:
+    activity_name: 
+      - type: from_text
+    task_status: 
+      - type: from_text
+    start_time: 
+      - type: from_text
+    end_time: 
+      - type: from_text
+    tte_data:
+      - type: from_text
+  
+  add_tte_form: 
+    project_id:
+      - type: from_text
+    main_task_id:
+      - type: from_text
+    sub_task_id:
+      - type: from_text
+    sub_sub_task_id:
+      - type: from_text
+    task_description:
+      - type: from_text
+
+  user_login_form:
+    emp_code:
+      - type: from_text
+        entity: emp_code
+    password:
+      - type: from_text
+        entity: password
+
+session_config:   
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,57 @@
+version: '3.0'
+services:
+    flask:
+        container_name: daserver
+        image: daserver
+        networks:
+            - nova_action_connect
+        ports:
+            - 5000:5000
+        restart: always
+
+    Action-Server-login-logout:
+        container_name: action_login_server
+        image: loginserver
+        networks:
+            - nova_action_connect
+        ports:
+            - 5008:5008
+        restart: always
+
+    Action-Server-profileinfo:
+        container_name: action_profile_server
+        image: profileinfoserver
+        networks:
+            - nova_action_connect
+        ports:
+            - 5010:5010
+        restart: always
+
+    Action-Server-leavemgmt:
+        container_name: action_leavemgmt_server
+        image: leavemgmtserver
+        networks:
+            - nova_action_connect
+        ports:
+            - 5009:5009
+        restart: always
+
+    Action-Server-leaveapp:
+        container_name: action_leaveapp_server
+        image: leaveappserver
+        networks:
+            - nova_action_connect
+        ports:
+            - 5013:5013
+        restart: always        
+
+    Action-Server-faq:
+        container_name: action_faq_server
+        image: faqserver
+        networks:
+            - nova_action_connect
+        ports:
+            - 5012:5012
+        restart: always        
+networks:
+    nova_action_connect:

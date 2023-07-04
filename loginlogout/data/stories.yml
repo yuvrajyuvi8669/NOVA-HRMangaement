@@ -1,0 +1,58 @@
+version: "2.0"
+stories:
+
+- story: Greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  
+- story: login story flow control
+  steps:
+  - intent: user_login
+  - action: user_login_form
+  - active_loop: user_login_form
+  - active_loop: null
+  - action: action_user_login_form_submit
+  
+- story: log out
+  steps:
+  - intent: logout
+  - action: action_restart
+  - slot_was_set:
+    - logout_status: false
+  - slot_was_set:
+    - emp_code: None
+  - slot_was_set:
+    - password: None
+
+- story: go to main menu story
+  steps:
+  - intent: main_menu
+  - action: action_check_logged_for_main_menu
+  - slot_was_set:
+    - emp_code: omi-83
+  - slot_was_set:
+    - password: omfys@123
+
+- story: user_login story
+  steps:
+  - intent: user_login
+  - action: user_login_form
+  - active_loop: user_login_form
+  - slot_was_set:
+    - requested_slot: emp_code
+  - slot_was_set:
+    - emp_code: OMI-1036
+  - slot_was_set:
+    - requested_slot: password
+  - slot_was_set:
+    - password: Omfys@123
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_user_login_form_submit

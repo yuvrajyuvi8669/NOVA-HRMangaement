@@ -1,0 +1,205 @@
+version: "2.0"
+
+stories:
+
+- story: set login slot
+  steps:
+  - intent: login_data
+  - action: action_set_login_slots
+
+
+# - story: set login slot
+#   steps:
+#   - intent: login_data
+#   - action: action_set_login_slots
+
+  
+# - story: get_empid1
+#   steps:
+#   - intent: empID
+#   - action: action_get_empid
+
+- story: user_login story
+  steps:
+  - intent: signin_of_employee
+  - action: user_login_form
+  - active_loop: user_login_form
+  - slot_was_set:
+    - requested_slot: emp_code
+  - slot_was_set:
+    - emp_code: OMI-1036
+  - slot_was_set:
+    - requested_slot: password
+  - slot_was_set:
+    - password: Omfys@123
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_user_login_form_submit
+  
+  
+# - story: log out
+#   steps:
+#   - intent: logout
+#   - action: action_logout
+#   - slot_was_set:
+#     - logout_status: false
+#   - slot_was_set:
+#     - emp_code: None
+#   - slot_was_set:
+#     - password: None
+#   - action: utter_logout_meesage
+  
+# - story: already logged out
+#   steps:
+#   - intent: logout
+#   - action: action_logout
+#   - slot_was_set:
+#     - logout_status: true
+#   - action: utter_already_logged_out_meesage
+
+
+- story: list of approved_leaves
+  steps:
+  - intent: approved_leaves
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+
+- story: approved_leaves
+  steps:
+  - intent: approved_leaves
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: action_show_approved_leaves
+  - slot_was_set:
+    - daterange: None
+
+- story: list of pending approval1
+  steps:
+  - intent: asking_for_pending_leaves
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+
+- story: single employee leave detail1
+  steps:
+  - intent: asking_for_one_leave
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+
+- story: single employee leave detail_by_name
+  steps:
+  - intent: asking_for_one_leave_by_name
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: false
+  - action: utter_service_failed_login_message
+
+
+
+
+######## - story: list of pending approval3
+#   steps:
+#   - intent: asking_for_pending_leaves
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: true
+#   - action: action_get_list_of_pending_approval
+#   - action: confirmationBoxform
+#   - active_loop: confirmationBoxform
+#   - active_loop: null
+#   - action: action_confirmationBoxform_submit
+#   - action: action_show_confirmation_box
+#   - slot_was_set:
+#     - ordinal: None
+
+
+- story: list of pending approval2
+  steps:
+  - intent: asking_for_pending_leaves
+  - action: action_check_login_status
+  - slot_was_set:
+    - login_status: true
+  - action: action_get_list_of_pending_approval
+  - action: confirmationBoxform
+  - active_loop: confirmationBoxform
+  - active_loop: null
+  - action: action_confirmationBoxform_submit
+  - action: emp_code_collect_form
+  - active_loop: emp_code_collect_form
+  - active_loop: null
+  - action: action_emp_code_collect_form_submit
+  - action: action_get_checked_values
+  - slot_was_set:
+    - empCodeForleaveRequest: None
+  - slot_was_set:
+    - ordinal: None
+  - intent: deny
+  - action: utter_continue_leaves_service
+
+# - story: list of pending approval4
+#   steps:
+#   - intent: asking_for_pending_leaves
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: true
+#   - action: action_get_list_of_pending_approval
+#   - action: confirmationBoxform
+#   - active_loop: confirmationBoxform
+#   - active_loop: null
+#   - action: action_confirmationBoxform_submit
+#   - action: emp_code_collect_form
+#   - active_loop: emp_code_collect_form
+#   - active_loop: null
+#   - action: action_emp_code_collect_form_submit
+#   - action: action_get_checked_values
+#   - slot_was_set:
+#     - empCodeForleaveRequest: None
+#   - slot_was_set:
+#     - ordinal: None
+#     - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: true
+#     - action: action_get_list_of_pending_approval
+#   - action: confirmationBoxform
+#   - active_loop: confirmationBoxform
+#   - active_loop: null
+#   - action: action_confirmationBoxform_submit
+#   - action: emp_code_collect_form
+#   - active_loop: emp_code_collect_form
+#   - active_loop: null
+#   - action: action_emp_code_collect_form_submit
+#   - action: action_get_checked_values
+#   - slot_was_set:
+#     - empCodeForleaveRequest: None
+#   - slot_was_set:
+#     - ordinal: None
+
+# - story: single employee leave detail2_by_name
+#   steps:
+#   - intent: asking_for_one_leave_by_name
+#   - action: action_check_login_status
+#   - slot_was_set:
+#     - login_status: true
+#   - action: single_approval_name_form
+#   - active_loop: single_approval_name_form
+#   - active_loop: null
+#   - action: action_single_approval_name_form_submit
+#   - action: confirmationBoxform
+#   - active_loop: confirmationBoxform
+#   - active_loop: null
+#   - action: action_confirmationBoxform_submit
+#   - action: emp_code_collect_form
+#   - active_loop: emp_code_collect_form
+#   - active_loop: null
+#   - action: action_get_one_pending_approval_by_name
+#   - slot_was_set:
+#     - name2: None
+
+
